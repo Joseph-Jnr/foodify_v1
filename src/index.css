@@ -27,3 +27,25 @@ a {
   margin: 0 auto;
   padding: 0 20px;
 }
+
+.text-header {
+  margin-bottom: 20px;
+}
+
+.text-underline {
+  height: 5px;
+  width: 80px;
+  background: var(--light-orange);
+  border-radius: 90px;
+  position: relative;
+}
+
+.text-underline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 5px;
+  width: 30px;
+  background: var(--black);
+  border-radius: 90px;
+}

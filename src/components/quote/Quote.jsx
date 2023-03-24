@@ -10,7 +10,10 @@ const Quote = () => {
           <img src={quoteImg} alt='chef' />
         </div>
         <div className='quote-txt'>
-          <h2>Eat Healthy</h2>
+          <div className='text-header'>
+            <h2>Eat Healthy</h2>
+            <div className='text-underline'></div>
+          </div>
           <i>
             "Good food is not only essential for nourishment but also for
             enjoyment. It has the power to bring people together, create

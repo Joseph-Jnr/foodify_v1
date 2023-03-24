@@ -116,7 +116,7 @@ nav .cart-icon {
   width: 100%;
   z-index: 999;
   background: #ffffff87;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(8px);
   /* add any other styles you want here */
 }
 
