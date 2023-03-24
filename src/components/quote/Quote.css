@@ -1,0 +1,17 @@
+.quote-wrap {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 250px;
+  align-items: center;
+}
+
+.quote-wrap .quote-img img {
+  border-radius: 10px;
+}
+
+.quote-wrap .quote-txt h2 {
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}

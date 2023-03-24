@@ -1,0 +1,67 @@
+.main-header .container {
+  display: flex;
+  margin-top: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-header .text-area {
+  max-width: 450px;
+}
+
+.main-header .text-area h1 {
+  font-size: 50px;
+  font-weight: 300;
+}
+
+.main-header .text-area h1 .bold-text {
+  font-weight: 700;
+  color: var(--black);
+}
+
+.main-header .text-area h1 span.typed-text {
+  font-weight: 700;
+  color: var(--black);
+}
+.main-header .text-area h1 span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+.main-header .text-area h1 span.cursor.typing {
+  animation: none;
+}
+@keyframes blink {
+  0% {
+    background-color: #ccc;
+  }
+  49% {
+    background-color: #ccc;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #ccc;
+  }
+}
+
+.main-header .header-btns {
+  display: flex;
+  padding-top: 20px;
+}
+
+.main-header .header-btns a:last-child {
+  font-weight: 600;
+  color: var(--black);
+}
+
+.main-header .img-area img {
+  width: 700px;
+  height: auto;
+}
