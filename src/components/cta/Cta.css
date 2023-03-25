@@ -1,0 +1,22 @@
+.cta-section-wrap {
+  position: relative;
+  background: #fffef8;
+  padding: 70px 45px;
+  border-radius: 15px;
+  margin-bottom: -125px; /* 
+  box-shadow: -1px 1px 20px -2px rgba(97, 97, 97, 0.231);
+  -webkit-box-shadow: -1px 1px 20px -2px rgba(97, 97, 97, 0.231);
+  -moz-box-shadow: -1px 1px 20px -2px rgba(97, 97, 97, 0.231); */
+}
+
+.cta-text h1 {
+  font-size: 33px;
+  font-weight: 700;
+  color: #423e21;
+}
+
+.cta-text p {
+  font-size: 16px;
+  font-weight: 200;
+  color: #45401a;
+}
