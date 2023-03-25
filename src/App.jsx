@@ -12,9 +12,7 @@ function App() {
       <section className='section-padding'>
         <Quote />
       </section>
-      <footer>
-        <Footer />
-      </footer>
+      <Footer />
     </main>
   )
 }

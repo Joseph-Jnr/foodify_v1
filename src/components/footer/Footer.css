@@ -1,0 +1,52 @@
+.footer-section {
+  background: var(--black);
+  color: var(--white);
+}
+
+.footer-logo h1 {
+  font-size: 45px;
+  font-weight: 900;
+  color: var(--off-white);
+}
+
+.footer-logo span {
+  font-size: 14px;
+  color: var(--light-orange);
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links ul li {
+  padding: 12px 0px;
+}
+
+.footer-links ul li a {
+  color: var(--off-white);
+  font-weight: 200;
+  transition: all 0.5s ease-in-out;
+}
+
+.footer-links ul li a:hover {
+  color: var(--light-orange);
+}
+
+.footer-contact h2 {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--off-white);
+  margin-bottom: 15px;
+}
+
+.footer-contact p {
+  font-size: 14px;
+  font-weight: 100;
+  color: var(--off-white);
+  margin-bottom: 45px;
+}
+
+.payment-methods img {
+  width: 30px;
+  height: auto;
+}
