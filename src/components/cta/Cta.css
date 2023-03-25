@@ -1,12 +1,15 @@
 .cta-section-wrap {
   position: relative;
   background: #fffef8;
-  padding: 70px 45px;
   border-radius: 15px;
   margin-bottom: -125px; /* 
   box-shadow: -1px 1px 20px -2px rgba(97, 97, 97, 0.231);
   -webkit-box-shadow: -1px 1px 20px -2px rgba(97, 97, 97, 0.231);
   -moz-box-shadow: -1px 1px 20px -2px rgba(97, 97, 97, 0.231); */
+}
+
+.cta-section-wrap .cta-right {
+  padding: 45px;
 }
 
 .cta-text h1 {
@@ -19,4 +22,32 @@
   font-size: 16px;
   font-weight: 200;
   color: #45401a;
+}
+
+html.dark .cta-section {
+  background: var(--black);
+}
+
+html.dark .cta-section-wrap {
+  background: #192136;
+  color: var(--off-white);
+}
+
+html.dark .cta-text h1 {
+  color: var(--off-white);
+}
+
+html.dark .cta-text p {
+  color: #8796ab;
+}
+
+.cta-section-wrap .cta-img img {
+  height: 100%;
+  border-radius: 15px 0px 0px 15px;
+}
+
+.cta-section-wrap .qr-scan img {
+  width: 200px;
+  height: auto;
+  margin: 20px 0px;
 }

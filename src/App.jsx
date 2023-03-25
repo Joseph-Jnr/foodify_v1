@@ -9,9 +9,7 @@ function App() {
         <Navbar />
         <Header />
       </header>
-      <section className='section-padding'>
-        <Quote />
-      </section>
+      <Quote />
       <Cta />
       <Footer />
     </main>

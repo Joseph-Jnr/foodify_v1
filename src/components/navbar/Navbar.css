@@ -8,6 +8,10 @@ nav .navbar-brand a {
   color: var(--black);
 }
 
+html.dark nav .navbar-brand a {
+  color: var(--off-white);
+}
+
 nav .nav-links ul {
   display: flex;
   list-style: none;
@@ -19,6 +23,7 @@ nav .nav-links li {
 
 nav .nav-links li a {
   color: var(--teal-black);
+  font-weight: 200;
 }
 
 nav .nav-links li.active > a {
@@ -117,9 +122,22 @@ nav .cart-icon {
   z-index: 999;
   background: #ffffff87;
   backdrop-filter: blur(8px);
-  /* add any other styles you want here */
+}
+
+html.dark .navbarComponent.sticky {
+  background: #060114a5;
 }
 
 .navbarComponent.sticky .theme-switcher span {
   color: var(--black);
+}
+
+html.dark .nav-links ul li.active > a {
+  color: var(--off-white);
+}
+
+html.dark .navbarComponent.sticky .theme-switcher span,
+html.dark .navbarComponent .nav-links ul li a,
+html.dark .navbarComponent.sticky .nav-links ul li a {
+  color: #c7c7c7;
 }

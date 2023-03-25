@@ -56,3 +56,11 @@
 .payment-methods img:hover {
   filter: grayscale(0);
 }
+
+html.dark .payment-methods img {
+  filter: grayscale(0);
+}
+
+html.dark .footer-section {
+  background: #000;
+}

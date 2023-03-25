@@ -6,6 +6,9 @@ import './Navbar.css'
 
 const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false)
+  const [dark, setDark] = useState(
+    () => localStorage.getItem('isDark') === 'true'
+  )
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +23,29 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [])
+
+  useEffect(() => {
+    localStorage.setItem('isDark', dark)
+    if (dark) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }, [dark])
+
+  const handleToggle = () => {
+    setDark(!dark)
+  }
+
+  /* useEffect(() => {
+    // detect user's system preference for dark or light mode
+    const prefersDarkMode =
+      window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches
+    if (prefersDarkMode) {
+      setDark(true)
+    }
+  }, []) */
 
   return (
     <nav className={`navbarComponent ${isSticky ? 'sticky' : ''}`}>
@@ -54,11 +80,9 @@ const Navbar = () => {
           </ul>
         </div>
         <div className='right-actions flex items-center'>
-          <div className='theme-switcher'>
+          <div className='theme-switcher' onClick={handleToggle}>
             {/* Dark theme switcher */}
-            <span>
-              <CiDark />
-            </span>
+            <span>{dark ? <MdLightMode /> : <CiDark />}</span>
           </div>
           <div className='login-btn'>
             <a href='' className='btn main-btn flex items-center'>

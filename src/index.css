@@ -50,3 +50,7 @@ a {
   background: var(--black);
   border-radius: 90px;
 }
+
+html.dark .text-underline::before {
+  background: #473b21;
+}

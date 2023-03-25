@@ -1,3 +1,7 @@
+html.dark .main-header {
+  color: var(--white);
+}
+
 .main-header .container {
   display: flex;
   margin-top: 40px;
@@ -19,10 +23,19 @@
   color: var(--black);
 }
 
+html.dark .main-header .text-area h1 .bold-text {
+  color: var(--off-white);
+}
+
 .main-header .text-area h1 span.typed-text {
   font-weight: 700;
   color: var(--black);
 }
+
+html.dark .main-header .text-area h1 span.typed-text {
+  color: var(--off-white);
+}
+
 .main-header .text-area h1 span.cursor {
   display: inline-block;
   background-color: #ccc;
@@ -30,9 +43,20 @@
   width: 3px;
   animation: blink 1s infinite;
 }
+
+.main-header .text-area p {
+  color: var(--teal-black);
+  font-weight: 300;
+}
+
+html.dark .main-header .text-area p {
+  color: #8796ab;
+}
+
 .main-header .text-area h1 span.cursor.typing {
   animation: none;
 }
+
 @keyframes blink {
   0% {
     background-color: #ccc;
@@ -54,6 +78,15 @@
 .main-header .header-btns {
   display: flex;
   padding-top: 20px;
+}
+
+html.dark .main-header .header-btns .black-btn {
+  background: var(--off-white);
+  color: var(--black);
+}
+
+html.dark .main-header .header-btns .default-btn {
+  color: var(--off-white);
 }
 
 .main-header .header-btns a:last-child {

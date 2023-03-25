@@ -14,3 +14,12 @@
   font-size: 35px;
   font-weight: 700;
 }
+
+html.dark .quote-section {
+  background: var(--black);
+  color: var(--off-white);
+}
+
+html.dark .quote-txt i {
+  color: #8796ab;
+}
