@@ -27,5 +27,10 @@ header::after {
 }
 
 html.dark header {
-  background: var(--black);
+  background: linear-gradient(to bottom, transparent, var(--black)),
+    url(./assets/hero-dark.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
 }

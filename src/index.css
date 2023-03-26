@@ -5,7 +5,8 @@
 
 :root {
   --teal-black: #6d6d6d;
-  --black: #060114;
+  /* --black: #060114; */
+  --black: #020822;
   --white: #fff;
   --off-white: #e9e9e9;
   --light-orange: #ffda81;
