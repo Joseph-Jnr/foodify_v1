@@ -8,11 +8,13 @@
 
 .quote-wrap .quote-img img {
   border-radius: 10px;
+  transform: rotate(355deg);
+  transition: all 0.5s ease-in-out;
 }
 
-.quote-wrap .quote-txt h2 {
-  font-size: 35px;
-  font-weight: 700;
+.quote-wrap .quote-img img:hover {
+  cursor: pointer;
+  transform: rotate(360deg);
 }
 
 html.dark .quote-section {

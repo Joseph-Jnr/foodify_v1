@@ -1,5 +1,5 @@
 .footer-section {
-  background: #192136;
+  background: var(--dark-mid);
   color: var(--white);
 }
 

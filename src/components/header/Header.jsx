@@ -64,7 +64,7 @@ const Header = () => {
             and indulge in our mouth-watering selection!
           </p>
           <div className='header-btns'>
-            <a href='' className='btn black-btn'>
+            <a href='#foodlist' className='btn black-btn'>
               <span className='flex items-center justify-center'>
                 <HiOutlineShoppingBag />
               </span>

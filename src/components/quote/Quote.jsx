@@ -11,7 +11,7 @@ const Quote = () => {
             <img src={quoteImg} alt='chef' />
           </div>
           <div className='quote-txt'>
-            <div className='text-header'>
+            <div className='section-header'>
               <h2>Eat Healthy</h2>
               <div className='text-underline'></div>
             </div>
