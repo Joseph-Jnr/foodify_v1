@@ -1,6 +1,7 @@
 .footer-section {
   background: var(--dark-mid);
   color: var(--white);
+  padding-top: 140px;
 }
 
 .footer-logo h1 {
@@ -32,6 +33,7 @@
   color: var(--light-orange);
 }
 
+.footer-links h2,
 .footer-contact h2 {
   font-size: 20px;
   font-weight: 500;
@@ -63,4 +65,11 @@ html.dark .payment-methods img {
 
 html.dark .footer-section {
   background: #060114;
+}
+
+@media screen and (max-width: 765px) {
+  .footer-section .container {
+    display: grid;
+    row-gap: 60px;
+  }
 }

@@ -51,3 +51,22 @@ html.dark .cta-text p {
   height: auto;
   margin: 20px 0px;
 }
+
+@media screen and (max-width: 765px) {
+  .cta-section-wrap .cta-img img,
+  .cta-section-wrap .qr-scan img {
+    display: none;
+  }
+
+  .cta-text {
+    text-align: left !important;
+  }
+
+  .cta-text h1 {
+    font-size: 30px;
+  }
+
+  .cta-text p {
+    margin-bottom: 30px;
+  }
+}

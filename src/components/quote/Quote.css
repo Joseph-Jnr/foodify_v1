@@ -25,3 +25,21 @@ html.dark .quote-section {
 html.dark .quote-txt i {
   color: #8796ab;
 }
+
+@media screen and (max-width: 765px) {
+  .quote-wrap {
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 20px;
+    row-gap: 60px;
+  }
+
+  .quote-wrap .quote-img {
+    display: flex;
+    justify-content: center;
+  }
+
+  .quote-wrap .quote-img img {
+    width: 300px;
+    height: auto;
+  }
+}

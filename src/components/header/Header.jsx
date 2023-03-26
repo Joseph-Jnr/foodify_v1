@@ -71,7 +71,7 @@ const Header = () => {
               <span>Order now</span>
             </a>
             <a href='' className='btn default-btn flex items-center'>
-              Today's menu
+              Our Menu
               <span>
                 <BsCaretDownFill />
               </span>
@@ -79,7 +79,7 @@ const Header = () => {
           </div>
         </div>
         <div className='img-area'>
-          <img src={heroImg} alt='jollof rice' />
+          <img src={heroImg} className='img-fluid' alt='jollof rice' />
         </div>
       </div>
     </div>

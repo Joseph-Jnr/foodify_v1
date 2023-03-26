@@ -8,12 +8,13 @@ import moov from '../../assets/icons/moov.png'
 const Footer = () => {
   return (
     <footer className='footer-section section-padding'>
-      <div className='container flex justify-between'>
+      <div className='container md:flex justify-between'>
         <div className='footer-logo'>
           <h1>Foodify</h1>
           <span>Global cuisine, delivered with ease</span>
         </div>
         <div className='footer-links'>
+          <h2>Quick links</h2>
           <ul>
             <li>
               <a href=''> Services</a>

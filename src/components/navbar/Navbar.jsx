@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { MdShoppingBasket, MdLightMode } from 'react-icons/md'
 import { CiDark, CiLogin } from 'react-icons/ci'
+import { RiArrowDownSLine } from 'react-icons/ri'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
 
@@ -9,6 +10,12 @@ const Navbar = () => {
   const [dark, setDark] = useState(
     () => localStorage.getItem('isDark') === 'true'
   )
+
+  /*  const [showMenu, setShowMenu] = useState(false)
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu)
+  } */
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,7 +44,7 @@ const Navbar = () => {
     setDark(!dark)
   }
 
-  /* useEffect(() => {
+  useEffect(() => {
     // detect user's system preference for dark or light mode
     const prefersDarkMode =
       window.matchMedia &&
@@ -45,14 +52,17 @@ const Navbar = () => {
     if (prefersDarkMode) {
       setDark(true)
     }
-  }, []) */
+  }, [])
 
   return (
     <nav className={`navbarComponent ${isSticky ? 'sticky' : ''}`}>
       <div className='container flex items-center justify-between'>
         <div className='navbar-brand'>
-          <a href='#'>
-            Foodify <span>.</span>
+          <a href='#' className='flex items-center'>
+            Foodify{' '}
+            <span className='ml-2'>
+              <RiArrowDownSLine size={20} />
+            </span>
           </a>
         </div>
         <div className='nav-links'>

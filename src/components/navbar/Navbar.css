@@ -141,3 +141,13 @@ html.dark .navbarComponent .nav-links ul li a,
 html.dark .navbarComponent.sticky .nav-links ul li a {
   color: #c7c7c7;
 }
+
+@media screen and (max-width: 765px) {
+  .nav-links {
+    display: none;
+  }
+
+  .right-actions {
+    column-gap: 20px;
+  }
+}

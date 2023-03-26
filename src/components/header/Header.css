@@ -98,3 +98,24 @@ html.dark .main-header .header-btns .default-btn {
   width: 700px;
   height: auto;
 }
+
+@media screen and (max-width: 765px) {
+  .main-header .container {
+    display: grid;
+    flex-direction: row;
+    margin-top: 100px;
+    row-gap: 80px;
+  }
+
+  .main-header .header-btns {
+    margin-top: 20px;
+  }
+
+  .main-header .text-area {
+    margin-top: 20px;
+  }
+
+  .main-header .text-area h1 {
+    font-size: 40px;
+  }
+}
