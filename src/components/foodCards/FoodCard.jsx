@@ -12,7 +12,7 @@ const FoodCard = () => {
           <div className='text-underline'></div>
         </div>
 
-        <div className='main-food-container'>
+        <div className='main-food-container grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3'>
           {foodList.map((food, index) => (
             <FoodCardItem
               key={index}

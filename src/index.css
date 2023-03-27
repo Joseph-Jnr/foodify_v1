@@ -131,8 +131,9 @@ a {
 .section-header-alt {
   display: flex;
   justify-content: center;
-  margin-bottom: 100px;
+  margin-bottom: 120px;
   position: relative;
+  text-align: center;
 }
 
 .section-header-alt .text-underline {
@@ -141,7 +142,7 @@ a {
   background: var(--light-orange);
   border-radius: 90px;
   position: absolute;
-  top: 65px;
+  bottom: -20px;
 }
 
 .section-header-alt .text-underline::before {
@@ -152,6 +153,7 @@ a {
   height: 5px;
   width: 30px;
   background: var(--black);
+  border-radius: 90px;
 }
 
 html.dark .section-header .text-underline::before,

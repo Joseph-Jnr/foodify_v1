@@ -1,27 +1,45 @@
-.single-food-card {
+/* .single-food-card {
   background: var(--off-white);
   border-radius: 10px;
   position: relative;
   padding: 20px;
-  max-width: 400px;
+  width: 400px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
+} */
+.single-food-card {
+  background: var(--off-white);
+  border-radius: 10px;
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
 }
-
+/* 
 .single-food-card .img-area {
   position: relative;
   background: #0d1523;
   width: 150px;
   height: 150px;
   border-radius: 10px;
-  /* margin-left: -50px; */
   overflow: hidden;
+} */
+
+.single-food-card .img-area {
+  position: relative;
+  background: #0d1523;
+  width: 150px;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+  display: grid;
+  justify-content: center;
 }
 
 .single-food-card .img-area img {
-  width: 200px;
+  width: auto;
   height: auto;
   transition: all 0.5s ease-in-out;
 }
@@ -33,6 +51,8 @@
 
 .single-food-card .content {
   width: 100%;
+  padding: 20px;
+  padding-bottom: 35px;
 }
 
 .single-food-card .content h1 {
@@ -59,6 +79,9 @@
 
 .btns {
   margin-top: 20px;
+  position: absolute;
+  right: 10px;
+  bottom: 40px;
 }
 
 html.dark .single-food-card {
@@ -72,4 +95,10 @@ html.dark .price span {
 
 html.dark .single-food-card .content p {
   color: #8796ab;
+}
+
+@media screen and (max-width: 765px) {
+  .single-food-card {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

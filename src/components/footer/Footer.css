@@ -72,4 +72,7 @@ html.dark .footer-section {
     display: grid;
     row-gap: 60px;
   }
+  .footer-section .container > div:first-child {
+    order: 3;
+  }
 }

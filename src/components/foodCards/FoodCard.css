@@ -4,19 +4,5 @@ html.dark .food-card-section {
 }
 
 .main-food-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 70px;
-}
-
-@media screen and (max-width: 768px) {
-  .main-food-container {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .main-food-container {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  }
+  position: relative;
 }

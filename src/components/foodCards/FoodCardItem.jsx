@@ -5,7 +5,7 @@ import { AiOutlineTags } from 'react-icons/ai'
 
 const FoodCardItem = ({ image, title, category, price }) => {
   return (
-    <div className='single-food-card'>
+    <div className='single-food-card col-md-4'>
       <div className='img-area'>
         <img src={image} alt='food image' />
       </div>

@@ -1,16 +1,13 @@
 import React from 'react'
 import './Cta.css'
-import ctaImg from '../../assets/cta.jpg'
 import qrCode from '../../assets/qr.png'
 
 const Cta = () => {
   return (
     <div className='section-padding cta-section'>
       <div className='container'>
-        <div className='cta-section-wrap flex items-center justify-between shadow-lg'>
-          <div className='cta-img'>
-            <img src={ctaImg} alt='' />
-          </div>
+        <div className='cta-section-wrap shadow-lg'>
+          <div className='cta-img'></div>
           <div className='cta-right'>
             <div className='cta-text text-center'>
               <h1>Need something more specific?</h1>
@@ -25,11 +22,6 @@ const Cta = () => {
                 Contact us
               </a>
             </div>
-            {/* <div className='cta-action'>
-              <a href='' className='btn black-btn'>
-                Contact us
-              </a>
-            </div> */}
           </div>
         </div>
       </div>

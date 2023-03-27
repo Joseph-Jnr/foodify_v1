@@ -1,7 +1,9 @@
 import foodImg1 from '../../assets/food1.png'
 import foodImg2 from '../../assets/food2.png'
-import foodImg3 from '../../assets/food3.png'
-import foodImg4 from '../../assets/food4.png'
+import foodImg3 from '../../assets/food3.jpg'
+import foodImg4 from '../../assets/food4.jpg'
+import foodImg5 from '../../assets/cta.jpg'
+import foodImg6 from '../../assets/food5.jpg'
 
 export const foodList = [
   {
@@ -31,5 +33,19 @@ export const foodList = [
     title: 'Cheese Burger',
     category: 'Junk food',
     price: 1500,
+  },
+  {
+    id: '5',
+    image: foodImg5,
+    title: 'Chicken wings',
+    category: 'Junk food',
+    price: 6500,
+  },
+  {
+    id: '6',
+    image: foodImg6,
+    title: 'Beef Burger',
+    category: 'Junk food',
+    price: 3000,
   },
 ]
