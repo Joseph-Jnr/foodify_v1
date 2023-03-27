@@ -3,6 +3,7 @@ import heroImg from '../../assets/hero.png'
 import { HiOutlineShoppingBag } from 'react-icons/hi'
 import { BsCaretDownFill } from 'react-icons/bs'
 import './Header.css'
+import Button from '../UI/button/Button'
 
 const Header = () => {
   const [text, setText] = useState('')
@@ -64,12 +65,13 @@ const Header = () => {
             and indulge in our mouth-watering selection!
           </p>
           <div className='header-btns'>
-            <a href='#foodlist' className='btn black-btn'>
-              <span className='flex items-center justify-center'>
-                <HiOutlineShoppingBag />
-              </span>
-              <span>Order now</span>
-            </a>
+            <Button
+              icon={<HiOutlineShoppingBag />}
+              btnClass={'black-btn hasIcon'}
+              iconClass={'flex items-center justify-center'}
+              href={'#foodlist'}
+              text={'Order now'}
+            />
             <a href='' className='btn default-btn flex items-center'>
               Our Menu
               <span>

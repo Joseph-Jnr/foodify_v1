@@ -1,6 +1,7 @@
 import React from 'react'
 import './Cta.css'
 import qrCode from '../../assets/qr.png'
+import Button from '../UI/button/Button'
 
 const Cta = () => {
   return (
@@ -18,9 +19,7 @@ const Cta = () => {
               <div className='qr-scan flex justify-center'>
                 <img src={qrCode} alt='' />
               </div>
-              <a href='' className='btn black-btn'>
-                Contact us
-              </a>
+              <Button btnClass={'black-btn'} href={''} text={'Contact us'} />
             </div>
           </div>
         </div>

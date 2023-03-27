@@ -80,11 +80,6 @@ html.dark .main-header .text-area p {
   padding-top: 20px;
 }
 
-html.dark .main-header .header-btns .black-btn {
-  background: var(--off-white);
-  color: var(--black);
-}
-
 html.dark .main-header .header-btns .default-btn {
   color: var(--off-white);
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import './FoodCardItem.css'
 import { MdShoppingBasket } from 'react-icons/md'
 import { AiOutlineTags } from 'react-icons/ai'
+import Button from '../UI/button/Button'
 
 const FoodCardItem = ({ image, title, category, price }) => {
   return (
@@ -22,12 +23,13 @@ const FoodCardItem = ({ image, title, category, price }) => {
           <span className='currency'>FCFA</span>
         </div>
         <div className='btns'>
-          <a href='' className='btn black-btn'>
-            <span className='flex items-center justify-center'>
-              <MdShoppingBasket />
-            </span>
-            <span>Add to cart</span>
-          </a>
+          <Button
+            icon={<MdShoppingBasket />}
+            btnClass={'black-btn hasIcon'}
+            iconClass={'flex items-center justify-center'}
+            href={''}
+            text={'Add to cart'}
+          />
         </div>
       </div>
     </div>

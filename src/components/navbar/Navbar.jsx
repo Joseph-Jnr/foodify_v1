@@ -4,6 +4,7 @@ import { CiDark, CiLogin } from 'react-icons/ci'
 import { RiArrowDownSLine } from 'react-icons/ri'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
+import Button from '../UI/button/Button'
 
 const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false)
@@ -95,12 +96,13 @@ const Navbar = () => {
             <span>{dark ? <MdLightMode /> : <CiDark />}</span>
           </div>
           <div className='login-btn'>
-            <a href='' className='btn main-btn flex items-center'>
-              <span className='mr-2'>
-                <CiLogin />
-              </span>
-              Login
-            </a>
+            <Button
+              icon={<CiLogin />}
+              btnClass={'main-btn flex items-center'}
+              iconClass={'mr-2'}
+              href={''}
+              text={'Login'}
+            />
           </div>
         </div>
       </div>

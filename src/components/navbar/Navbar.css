@@ -74,46 +74,6 @@ nav .cart-icon {
   font-size: 28px;
 }
 
-.btn {
-  padding: 12px 25px;
-  border: none;
-  border-radius: 60px;
-}
-
-.main-btn,
-.main-btn:hover {
-  color: var(--black);
-  background: var(--light-orange);
-}
-
-.main-btn-outline,
-.main-btn-outline:hover {
-  color: var(--light-orange);
-  border: 1px solid var(--light-orange);
-}
-
-.black-btn,
-.black-btn:hover {
-  position: relative;
-  color: var(--white);
-  background: var(--black);
-}
-
-.black-btn span:first-child {
-  position: absolute;
-  top: 9px;
-  left: 10px;
-  height: 30px;
-  width: 30px;
-  border-radius: 60px;
-  background: var(--light-orange);
-  color: var(--black);
-}
-
-.black-btn span:last-child {
-  margin-left: 20px;
-}
-
 .navbarComponent.sticky {
   position: fixed;
   top: 0;
