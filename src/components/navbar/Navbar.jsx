@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { MdShoppingBasket, MdLightMode } from 'react-icons/md'
 import { CiDark, CiLogin } from 'react-icons/ci'
 import { RiArrowDownSLine } from 'react-icons/ri'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import './Navbar.css'
 import Button from '../UI/button/Button'
 
@@ -59,23 +59,29 @@ const Navbar = () => {
     <nav className={`navbarComponent ${isSticky ? 'sticky' : ''}`}>
       <div className='container flex items-center justify-between'>
         <div className='navbar-brand'>
-          <a href='#' className='flex items-center'>
+          <Link to='/' className='flex items-center'>
             Foodify{' '}
             <span className='ml-2'>
               <RiArrowDownSLine size={20} />
             </span>
-          </a>
+          </Link>
         </div>
         <div className='nav-links'>
           <ul>
-            <li className='active'>
-              <a href=''>Home</a>
+            <li>
+              <NavLink exact to='/' activeClassName='active'>
+                Home
+              </NavLink>
             </li>
             <li>
-              <a href=''>Menu</a>
+              <NavLink to='/menu' activeClassName='active'>
+                Menu
+              </NavLink>
             </li>
             <li>
-              <a href=''>Services</a>
+              <NavLink to='/services' activeClassName='active'>
+                Services
+              </NavLink>
             </li>
             <li>
               <a href='' className='flex items-center'>
