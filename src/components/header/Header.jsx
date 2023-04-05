@@ -46,45 +46,47 @@ const Header = () => {
   }
 
   return (
-    <div className='main-header'>
-      <div className='container mx-auto px-10'>
-        <div className='text-area'>
-          <h1>
-            <span className='bold-text'>
-              <span className='typed-text'>{text}</span>
-              <span className={`cursor ${isTyping ? 'typing' : ''}`}>
-                &nbsp;
-              </span>{' '}
-              your
-            </span>
-            <br />
-            favourite dish
-          </h1>
-          <p>
-            Looking for the best way to enjoy your favourite meals? Order online
-            and indulge in our mouth-watering selection!
-          </p>
-          <div className='header-btns'>
-            <Button
-              icon={<HiOutlineShoppingBag />}
-              btnClass={'black-btn hasIcon'}
-              iconClass={'flex items-center justify-center'}
-              href={'#foodlist'}
-              text={'Order now'}
-            />
-            <a href='' className='btn default-btn flex items-center'>
-              Our Menu
-              <span>
-                <BsCaretDownFill />
+    <header>
+      <div className='main-header'>
+        <div className='container mx-auto px-10'>
+          <div className='text-area'>
+            <h1>
+              <span className='bold-text'>
+                <span className='typed-text'>{text}</span>
+                <span className={`cursor ${isTyping ? 'typing' : ''}`}>
+                  &nbsp;
+                </span>{' '}
+                your
               </span>
-            </a>
+              <br />
+              favourite dish
+            </h1>
+            <p>
+              Looking for the best way to enjoy your favourite meals? Order
+              online and indulge in our mouth-watering selection!
+            </p>
+            <div className='header-btns'>
+              <Button
+                icon={<HiOutlineShoppingBag />}
+                btnClass={'black-btn hasIcon'}
+                iconClass={'flex items-center justify-center'}
+                href={'#foodlist'}
+                text={'Order now'}
+              />
+              <a href='' className='btn default-btn flex items-center'>
+                Our Menu
+                <span>
+                  <BsCaretDownFill />
+                </span>
+              </a>
+            </div>
+          </div>
+          <div className='img-area'>
+            <img src={heroImg} className='img-fluid' alt='jollof rice' />
           </div>
         </div>
-        <div className='img-area'>
-          <img src={heroImg} className='img-fluid' alt='jollof rice' />
-        </div>
       </div>
-    </div>
+    </header>
   )
 }
 

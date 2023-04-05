@@ -4,7 +4,7 @@ html.dark .main-header {
 
 .main-header .container {
   display: flex;
-  margin-top: 40px;
+  padding-top: 90px;
   align-items: center;
   justify-content: space-between;
 }
