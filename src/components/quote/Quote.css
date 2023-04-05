@@ -28,6 +28,8 @@ html.dark .quote-txt i {
 
 @media screen and (max-width: 765px) {
   .quote-wrap {
+    display: flex;
+    flex-direction: column-reverse;
     grid-template-columns: repeat(1, 1fr);
     margin-top: 20px;
     row-gap: 60px;
