@@ -6,14 +6,19 @@ nav {
   z-index: 2;
 }
 
-nav .navbar-brand a {
+nav .navbar-brand {
   font-size: 30px;
   font-weight: 900;
   color: var(--black);
+  cursor: pointer;
 }
 
-html.dark nav .navbar-brand a {
+html.dark nav .navbar-brand {
   color: var(--off-white);
+}
+
+.navbar-brand span {
+  display: none;
 }
 
 nav .nav-links ul {
@@ -31,6 +36,41 @@ nav .nav-links li a {
 }
 
 nav .nav-links li > a.active {
+  color: var(--black);
+  font-weight: 500;
+}
+
+.nav-links-mobile ul {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 30px;
+  flex-direction: column;
+  gap: 15px;
+  background: var(--off-white);
+  padding: 15px 20px;
+  border-radius: 6px;
+  box-shadow: 10px 15px 30px rgba(8, 9, 9, 0.205);
+}
+
+html.dark .nav-links-mobile ul {
+  background: var(--dark-mid);
+}
+
+nav .nav-links-mobile li {
+  margin: 0 20px;
+}
+
+nav .nav-links-mobile li a {
+  color: var(--teal-black);
+  font-weight: 200;
+}
+
+html.dark nav .nav-links-mobile li a {
+  color: #8796ab;
+}
+
+nav .nav-links-mobile li > a.active {
   color: var(--black);
   font-weight: 500;
 }
@@ -109,6 +149,18 @@ html.dark .navbarComponent.sticky .nav-links ul li a {
 @media screen and (max-width: 765px) {
   .nav-links {
     display: none;
+  }
+
+  .nav-links-mobile {
+    position: absolute;
+  }
+
+  .nav-links-mobile ul {
+    display: flex;
+  }
+
+  .navbar-brand span {
+    display: block;
   }
 
   .right-actions {

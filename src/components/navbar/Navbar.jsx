@@ -1,22 +1,21 @@
 import React, { useState, useEffect } from 'react'
 import { MdShoppingBasket, MdLightMode } from 'react-icons/md'
 import { CiDark, CiLogin } from 'react-icons/ci'
-import { RiArrowDownSLine } from 'react-icons/ri'
+import { RiArrowDownSLine, RiArrowUpSLine } from 'react-icons/ri'
 import { Link, NavLink } from 'react-router-dom'
 import './Navbar.css'
 import Button from '../UI/button/Button'
 
 const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false)
+  const [showMobileNav, setShowMobileNav] = useState(false)
   const [dark, setDark] = useState(
     () => localStorage.getItem('isDark') === 'true'
   )
 
-  /*  const [showMenu, setShowMenu] = useState(false)
-
-  const toggleMenu = () => {
-    setShowMenu(!showMenu)
-  } */
+  const toggleMobileNav = () => {
+    setShowMobileNav(!showMobileNav)
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,15 +57,17 @@ const Navbar = () => {
   return (
     <nav className={`navbarComponent ${isSticky ? 'sticky' : ''}`}>
       <div className='container flex items-center justify-between'>
-        <div className='navbar-brand'>
-          <Link to='/' className='flex items-center'>
-            Foodify{' '}
-            <span className='ml-2'>
+        <div className='navbar-brand flex items-center'>
+          Foodify{' '}
+          <span className='ml-2' onClick={toggleMobileNav}>
+            {showMobileNav ? (
+              <RiArrowUpSLine size={20} />
+            ) : (
               <RiArrowDownSLine size={20} />
-            </span>
-          </Link>
+            )}
+          </span>
         </div>
-        <div className='nav-links'>
+        <div className={showMobileNav ? 'nav-links-mobile' : 'nav-links'}>
           <ul>
             <li>
               <NavLink exact to='/' activeClassName='active'>
@@ -102,13 +103,14 @@ const Navbar = () => {
             <span>{dark ? <MdLightMode /> : <CiDark />}</span>
           </div>
           <div className='login-btn'>
-            <Button
-              icon={<CiLogin />}
-              btnClass={'main-btn flex items-center'}
-              iconClass={'mr-2'}
-              href={''}
-              text={'Login'}
-            />
+            <Link to='/login'>
+              <Button
+                icon={<CiLogin />}
+                btnClass={'main-btn flex items-center'}
+                iconClass={'mr-2'}
+                text={'Login'}
+              />
+            </Link>
           </div>
         </div>
       </div>
