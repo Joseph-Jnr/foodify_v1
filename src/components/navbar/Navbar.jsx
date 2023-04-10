@@ -46,11 +46,20 @@ const Navbar = () => {
 
   useEffect(() => {
     // detect user's system preference for dark or light mode
-    const prefersDarkMode =
-      window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches
-    if (prefersDarkMode) {
-      setDark(true)
+    const handleColorSchemeChange = () => {
+      setDark(window.matchMedia('(prefers-color-scheme: dark)').matches)
+    }
+
+    handleColorSchemeChange() // set initial value
+
+    window
+      .matchMedia('(prefers-color-scheme: dark)')
+      .addEventListener('change', handleColorSchemeChange)
+
+    return () => {
+      window
+        .matchMedia('(prefers-color-scheme: dark)')
+        .removeEventListener('change', handleColorSchemeChange)
     }
   }, [])
 
