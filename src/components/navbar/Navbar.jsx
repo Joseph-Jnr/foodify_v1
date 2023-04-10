@@ -12,9 +12,11 @@ const Navbar = () => {
   const [dark, setDark] = useState(
     () => localStorage.getItem('isDark') === 'true'
   )
+  const [rotateIcon, setRotateIcon] = useState(false)
 
   const toggleMobileNav = () => {
     setShowMobileNav(!showMobileNav)
+    setRotateIcon(!rotateIcon)
   }
 
   useEffect(() => {
@@ -68,12 +70,11 @@ const Navbar = () => {
       <div className='container flex items-center justify-between'>
         <div className='navbar-brand flex items-center'>
           Foodify{' '}
-          <span className='ml-2' onClick={toggleMobileNav}>
-            {showMobileNav ? (
-              <RiArrowUpSLine size={20} />
-            ) : (
-              <RiArrowDownSLine size={20} />
-            )}
+          <span
+            className={`ml-2 ${showMobileNav ? 'rotate' : ''}`}
+            onClick={toggleMobileNav}
+          >
+            <RiArrowDownSLine size={20} />
           </span>
         </div>
         <div className={showMobileNav ? 'nav-links-mobile' : 'nav-links'}>

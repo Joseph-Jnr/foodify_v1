@@ -159,8 +159,17 @@ html.dark .navbarComponent.sticky .nav-links ul li a {
     display: flex;
   }
 
+  .navbar-brand {
+    user-select: none !important;
+  }
+
   .navbar-brand span {
     display: block;
+    transition: transform 0.5s ease;
+  }
+
+  .navbar-brand span.rotate {
+    transform: rotate(180deg);
   }
 
   .right-actions {
