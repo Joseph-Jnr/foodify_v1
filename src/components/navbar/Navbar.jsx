@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { MdShoppingBasket, MdLightMode } from 'react-icons/md'
 import { CiDark, CiLogin } from 'react-icons/ci'
-import { RiArrowDownSLine, RiArrowUpSLine } from 'react-icons/ri'
-import { Link, NavLink } from 'react-router-dom'
+import { RiArrowDownSLine } from 'react-icons/ri'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import './Navbar.css'
 import Button from '../UI/button/Button'
 
@@ -18,6 +18,9 @@ const Navbar = () => {
     setShowMobileNav(!showMobileNav)
     setRotateIcon(!rotateIcon)
   }
+
+  const location = useLocation()
+  const isHomePage = location.pathname === '/'
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,7 +45,7 @@ const Navbar = () => {
     }
   }, [dark])
 
-  const handleToggle = () => {
+  const handleThemeToggle = () => {
     setDark(!dark)
   }
 
@@ -68,34 +71,41 @@ const Navbar = () => {
   return (
     <nav className={`navbarComponent ${isSticky ? 'sticky' : ''}`}>
       <div className='container flex items-center justify-between'>
-        <div className='navbar-brand flex items-center'>
-          Foodify{' '}
-          <span
-            className={`ml-2 ${showMobileNav ? 'rotate' : ''}`}
+        {window.innerWidth <= 765 ? (
+          <div
+            className='navbar-brand flex items-center'
             onClick={toggleMobileNav}
           >
-            <RiArrowDownSLine size={20} />
-          </span>
-        </div>
+            Foodify{' '}
+            <span className={`ml-2 ${showMobileNav ? 'rotate' : ''}`}>
+              <RiArrowDownSLine size={20} />
+            </span>
+          </div>
+        ) : (
+          <Link to='/' className='navbar-brand flex items-center'>
+            Foodify
+          </Link>
+        )}
+
         <div className={showMobileNav ? 'nav-links-mobile' : 'nav-links'}>
           <ul>
             <li>
-              <NavLink exact to='/' activeClassName='active'>
+              <NavLink exact='true' to='/' activeclassname='active'>
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink to='/menu' activeClassName='active'>
+              <NavLink to='/menu' activeclassname='active'>
                 Menu
               </NavLink>
             </li>
             <li>
-              <NavLink to='/services' activeClassName='active'>
+              <NavLink to='/services' activeclassname='active'>
                 Services
               </NavLink>
             </li>
             <li>
-              <a href='' className='flex items-center'>
+              <NavLink to='/cart' className='flex items-center'>
                 Cart
                 <span className='counter-wrap ml-1'>
                   <span className='cart-counter'>2</span>
@@ -103,12 +113,15 @@ const Navbar = () => {
                     <MdShoppingBasket />
                   </span>
                 </span>
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
         <div className='right-actions flex items-center'>
-          <div className='theme-switcher' onClick={handleToggle}>
+          <div
+            className={`theme-switcher ${isHomePage ? 'white' : ''}`}
+            onClick={handleThemeToggle}
+          >
             {/* Dark theme switcher */}
             <span>{dark ? <MdLightMode /> : <CiDark />}</span>
           </div>

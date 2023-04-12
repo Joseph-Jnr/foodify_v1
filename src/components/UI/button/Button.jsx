@@ -1,12 +1,12 @@
 import React from 'react'
 import './Button.css'
 
-const Button = ({ icon, text, btnClass, iconClass, href }) => {
+const Button = ({ icon, text, btnClass, iconClass, onClick }) => {
   return (
-    <a href={href} className={`btn ${btnClass}`}>
+    <div onClick={onClick} className={`btn ${btnClass}`}>
       <span className={iconClass}>{icon}</span>
       <span>{text}</span>
-    </a>
+    </div>
   )
 }
 

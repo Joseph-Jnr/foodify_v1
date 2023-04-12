@@ -4,6 +4,10 @@
   border-radius: 60px;
 }
 
+.btn:hover {
+  cursor: pointer;
+}
+
 .main-btn,
 .main-btn:hover {
   color: var(--black);

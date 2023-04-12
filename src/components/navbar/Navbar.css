@@ -113,7 +113,21 @@ nav .cart-icon {
   align-items: center;
 }
 
+.theme-switcher.white span {
+  color: var(--white);
+  font-size: 28px;
+}
+
 .theme-switcher span {
+  color: var(--black);
+  font-size: 28px;
+}
+
+html.dark .theme-switcher span {
+  color: var(--white);
+}
+
+.theme-switcher.light span {
   color: var(--white);
   font-size: 28px;
 }

@@ -2,7 +2,7 @@
 
 .menu {
   background-color: var(--white);
-  background-image: url(../img/process-top.png);
+  /* background-image: url(../img/process-top.png); */
   background-size: 240px;
   background-repeat: no-repeat;
   background-position: bottom right;

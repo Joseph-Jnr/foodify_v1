@@ -5,6 +5,14 @@ import foodImg4 from '../../assets/food4.jpg'
 import foodImg5 from '../../assets/cta.jpg'
 import foodImg6 from '../../assets/food5.jpg'
 
+// Axios API
+const fetchProduct = async () => {
+  const response = await axios.get('endpoint').catch((err) => {
+    console.log('Err: ', err)
+  })
+  return response
+}
+
 export const foodList = [
   {
     id: '1',

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import heroImg from '../../assets/hero.png'
 import { HiOutlineShoppingBag } from 'react-icons/hi'
 import { BsCaretDownFill } from 'react-icons/bs'
+import { Link } from 'react-router-dom'
 import './Header.css'
 import Button from '../UI/button/Button'
 
@@ -70,15 +71,17 @@ const Header = () => {
                 icon={<HiOutlineShoppingBag />}
                 btnClass={'black-btn hasIcon'}
                 iconClass={'flex items-center justify-center'}
-                href={'#foodlist'}
+                onClick={() =>
+                  document.querySelector('#foodlist').scrollIntoView()
+                }
                 text={'Order now'}
               />
-              <a href='' className='btn default-btn flex items-center'>
+              <Link to='/menu' className='btn default-btn flex items-center'>
                 Our Menu
                 <span>
                   <BsCaretDownFill />
                 </span>
-              </a>
+              </Link>
             </div>
           </div>
           <div className='img-area'>
