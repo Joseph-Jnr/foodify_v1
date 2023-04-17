@@ -8,6 +8,11 @@
   background-position: bottom right;
 }
 
+html.dark .menu {
+  background: var(--black);
+  color: #d3e2f7;
+}
+
 .menu-card {
   background: transparent;
   border: 2px solid var(--dark-mid);
@@ -75,6 +80,10 @@
   font-size: 14px;
   font-style: italic;
   margin: 12px 0;
+}
+
+html.dark .menu-card .single-item .item-meta p {
+  color: #d3e2f7;
 }
 
 /* Responsive */
