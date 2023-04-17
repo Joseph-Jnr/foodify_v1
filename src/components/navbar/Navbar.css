@@ -40,6 +40,8 @@ nav .nav-links li > a.active {
   font-weight: 500;
 }
 
+/* Mobile navigation styles ----- First variant */
+
 .nav-links-mobile ul {
   display: none;
   position: absolute;
@@ -70,16 +72,54 @@ html.dark nav .nav-links-mobile li a {
   color: #8796ab;
 }
 
-nav .nav-links-mobile li > a.active {
+nav .nav-links-mobile li > a.active,
+.mobile-nav li > a.active {
   color: var(--black);
   font-weight: 500;
 }
+/* First variant end */
 
-nav .counter-wrap {
+/* Second variant */
+.mobile-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--off-white);
+  z-index: 3;
+}
+
+.mobile-nav ul {
+  display: flex;
+  margin: 12px auto;
+}
+
+.mobile-nav ul li {
+  margin: 12px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-nav ul li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-nav ul li a span {
+  font-size: 20px;
+}
+/* Second variant end */
+
+nav .counter-wrap,
+.mobile-nav .counter-wrap {
   position: relative;
 }
 
-nav .cart-counter {
+nav .cart-counter,
+.mobile-nav .cart-counter {
   position: absolute;
   top: -8px;
   right: -14px;
