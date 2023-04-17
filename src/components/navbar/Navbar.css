@@ -146,25 +146,39 @@ nav .cart-icon {
 
 .theme-switcher {
   cursor: pointer;
-  height: 30px;
-  width: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.theme-switcher.white span {
+.cart-icon span:nth-child(2) {
+  color: var(--black);
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.cart-icon.white span:nth-child(2) {
   color: var(--white);
-  font-size: 28px;
 }
 
 .theme-switcher span {
   color: var(--black);
-  font-size: 28px;
+  font-size: 23px;
 }
 
-html.dark .theme-switcher span {
-  color: var(--white);
+.mobile-theme-switcher {
+  display: flex;
+  align-items: center;
+}
+
+.mobile-theme-switcher > span {
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+html.dark .theme-switcher span,
+html.dark .cart-icon span {
+  color: #c7c7c7;
 }
 
 .theme-switcher.light span {
@@ -186,7 +200,7 @@ html.dark .navbarComponent.sticky {
   background: #060114a5;
 }
 
-.navbarComponent.sticky .theme-switcher span {
+.navbarComponent.sticky .cart-icon span:nth-child(2) {
   color: var(--black);
 }
 
@@ -194,7 +208,7 @@ html.dark .nav-links ul li.active > a {
   color: var(--off-white);
 }
 
-html.dark .navbarComponent.sticky .theme-switcher span,
+html.dark .navbarComponent.sticky .cart-icon span:nth-child(2),
 html.dark .navbarComponent .nav-links ul li a,
 html.dark .navbarComponent.sticky .nav-links ul li a {
   color: #c7c7c7;

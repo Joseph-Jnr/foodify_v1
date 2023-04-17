@@ -147,25 +147,37 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink className='flex items-center' onClick={showCart}>
-                  Cart
-                  <span className='counter-wrap ml-1'>
-                    <span className='cart-counter'>{`${itemCount}`}</span>
-                    <span className='cart-icon'>
-                      <MdShoppingBasket />
+                <div
+                  className={`theme-switcher ${isHomePage ? 'white' : ''}`}
+                  onClick={handleThemeToggle}
+                >
+                  {/* Theme switcher */}
+
+                  {window.innerWidth <= 765 ? (
+                    <span className='mobile-theme-switcher'>
+                      {dark ? <MdLightMode /> : <CiDark />}{' '}
+                      {dark ? <span>Light</span> : <span>Dark</span>}
                     </span>
-                  </span>
-                </NavLink>
+                  ) : (
+                    <span>{dark ? <MdLightMode /> : <CiDark />}</span>
+                  )}
+                </div>
               </li>
             </ul>
           </div>
           <div className='right-actions flex items-center'>
             <div
-              className={`theme-switcher ${isHomePage ? 'white' : ''}`}
-              onClick={handleThemeToggle}
+              className={`cart-icon flex items-center ${
+                isHomePage ? 'white' : ''
+              }`}
+              onClick={showCart}
             >
-              {/* Dark theme switcher */}
-              <span>{dark ? <MdLightMode /> : <CiDark />}</span>
+              <span className='counter-wrap ml-1'>
+                <span className='cart-counter'>{`${itemCount}`}</span>
+                <span className='cart-icon'>
+                  <MdShoppingBasket />
+                </span>
+              </span>
             </div>
             <div className='login-btn'>
               <Link to='/login'>
