@@ -6,3 +6,54 @@ html.dark .food-card-section {
 .main-food-container {
   position: relative;
 }
+
+.filter-bar {
+  overflow-x: scroll;
+}
+
+.filter-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-bar::-moz-scrollbar {
+  display: none;
+}
+
+.filter-bar .single-filter {
+  margin-right: 20px;
+  padding: 10px 25px;
+  font-size: 14px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.filter-bar .single-filter.active {
+  background: var(--light-orange);
+  font-weight: 700;
+}
+
+html.dark .filter-bar .single-filter.active {
+  color: var(--black);
+}
+
+.filter-bar .single-filter:hover {
+  cursor: pointer;
+}
+
+.filter-bar .single-filter p {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 765px) {
+  .filter-bar .single-filter {
+    padding: 0px 25px;
+  }
+  .filter-bar .single-filter p {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+}
