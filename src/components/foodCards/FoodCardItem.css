@@ -8,7 +8,7 @@
 
 .single-food-card .img-area {
   position: relative;
-  background: #0d1523;
+  background: #000;
   height: 180px;
   overflow: hidden;
   border-radius: 10px;
@@ -19,12 +19,46 @@
 .single-food-card .img-area img {
   width: 100%;
   height: auto;
+  object-fit: cover;
   transition: all 0.5s ease-in-out;
 }
 
 .single-food-card .img-area img:hover {
   cursor: pointer;
   transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.btns {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.single-food-card:hover .overlay {
+  opacity: 1;
+}
+
+.single-food-card:hover .btns {
+  opacity: 1;
 }
 
 .single-food-card .content {
@@ -56,13 +90,6 @@
 .price span:nth-child(1) {
   font-size: 20px;
   font-weight: 700;
-}
-
-.btns {
-  margin-top: 20px;
-  position: absolute;
-  right: 10px;
-  bottom: 40px;
 }
 
 html.dark .single-food-card .content h1 {
@@ -101,5 +128,13 @@ html.dark .price span {
 
   .price span:nth-child(1) {
     font-size: 18px;
+  }
+
+  .single-food-card .btns .btn {
+    font-size: 12px;
+  }
+
+  .single-food-card .black-btn.hasIcon span:first-child {
+    top: 5px;
   }
 }
