@@ -108,6 +108,12 @@ a {
   font-weight: 700;
 }
 
+.section-header h4,
+.section-header-alt h4 {
+  font-size: 25px;
+  font-weight: 500;
+}
+
 .section-header .text-underline {
   height: 5px;
   width: 80px;
@@ -159,4 +165,11 @@ a {
 html.dark .section-header .text-underline::before,
 html.dark .section-header-alt .text-underline::before {
   background: #241b06;
+}
+
+@media screen and (max-width: 765px) {
+  .section-header h4,
+  .section-header-alt h4 {
+    font-size: 18px;
+  }
 }
