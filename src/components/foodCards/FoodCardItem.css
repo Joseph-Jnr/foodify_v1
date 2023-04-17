@@ -69,7 +69,8 @@ html.dark .single-food-card .content h1 {
   color: #d3e2f7;
 }
 
-html.dark .single-food-card .content p {
+html.dark .single-food-card .content p,
+html.dark .price span {
   color: #8796ab;
 }
 
