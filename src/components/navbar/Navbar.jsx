@@ -7,6 +7,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom'
 import './Navbar.css'
 import Button from '../UI/button/Button'
 import { Context } from '../../context'
+import Cart from '../cart/Cart'
 
 const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false)
@@ -14,6 +15,9 @@ const Navbar = () => {
   const [dark, setDark] = useState(
     () => localStorage.getItem('isDark') === 'true'
   )
+
+  const [showCartModal, setShowCartModal] = useState(false)
+
   const [rotateIcon, setRotateIcon] = useState(false)
 
   const toggleMobileNav = () => {
@@ -71,7 +75,7 @@ const Navbar = () => {
   }, [])
 
   const { state } = useContext(Context)
-  console.log('---->', state)
+  //console.log('---->', state)
 
   const { cart } = state
   let itemCount = 0
@@ -81,6 +85,15 @@ const Navbar = () => {
 
   const hideMobileNav = () => {
     setShowMobileNav(false)
+  }
+
+  const showCart = () => {
+    hideMobileNav()
+    setShowCartModal(true)
+  }
+
+  const hideCart = () => {
+    setShowCartModal(false)
   }
 
   return (
@@ -134,11 +147,7 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink
-                  to='/cart'
-                  className='flex items-center'
-                  onClick={hideMobileNav}
-                >
+                <NavLink className='flex items-center' onClick={showCart}>
                   Cart
                   <span className='counter-wrap ml-1'>
                     <span className='cart-counter'>{`${itemCount}`}</span>
@@ -172,49 +181,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* {window.innerWidth <= 765 ? (
-        <div className='mobile-nav'>
-          <ul>
-            <li>
-              <NavLink exact='true' to='/' activeclassname='active'>
-                <span>
-                  <BiHomeAlt />
-                </span>
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to='/menu' activeclassname='active'>
-                <span>
-                  <BiFoodMenu />
-                </span>
-                Menu
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to='/services' activeclassname='active'>
-                <span>
-                  <RiServiceLine />
-                </span>
-                Services
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to='/cart' className='flex items-center'>
-                <span className='counter-wrap ml-1'>
-                  <span className='cart-counter'>2</span>
-                  <span className='cart-icon'>
-                    <MdShoppingBasket />
-                  </span>
-                </span>
-                Cart
-              </NavLink>
-            </li>
-          </ul>
-        </div>
-      ) : (
-        <></>
-      )} */}
+      {showCartModal && <Cart handleClose={hideCart} open={showCartModal} />}
     </>
   )
 }

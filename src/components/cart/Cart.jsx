@@ -1,18 +1,12 @@
 import React, { useState } from 'react'
 import './Cart.css'
 import { GrFormClose } from 'react-icons/gr'
-import cartImg from '../../assets/icons/out-of-stock.webp'
+import cartImg from '../../assets/icons/empty-cart.png'
 
-const Cart = () => {
-  const [cartVisible, setCartVisible] = useState(true)
-
-  const handleCartClose = () => {
-    setCartVisible(false)
-  }
-
+const Cart = ({ handleClose, open }) => {
   return (
     <>
-      {cartVisible && (
+      {open && (
         <>
           <div className='backdrop'></div>
           <div className='cart'>
@@ -22,15 +16,17 @@ const Cart = () => {
               </div>
               <div
                 className='close text-2xl flex justify-center'
-                onClick={handleCartClose}
+                onClick={handleClose}
               >
                 <GrFormClose />
               </div>
             </div>
 
-            <div className='cart-body'>
-              <img src={cartImg} alt='empty cart' />
-              <p className='flex justify-center'>Oooops! Your cart is empty</p>
+            <div className='cart-body mt-16'>
+              <img src={cartImg} className='img-fluid' alt='empty cart' />
+              <p className='flex justify-center font-semibold'>
+                Oooops! Your cart is empty
+              </p>
             </div>
           </div>
         </>

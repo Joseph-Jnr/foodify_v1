@@ -9,7 +9,7 @@ main {
   bottom: 0;
   right: 0;
   height: 100%;
-  width: 45vh;
+  width: 35vw;
   background: var(--off-white);
   padding: 20px;
   z-index: 999;
