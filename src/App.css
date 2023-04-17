@@ -30,6 +30,10 @@ html.dark header {
   position: relative;
 }
 
+main {
+  position: relative;
+}
+
 @media screen and (max-width: 765px) {
   header::after {
     right: -600px;

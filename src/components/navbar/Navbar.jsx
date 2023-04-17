@@ -79,6 +79,10 @@ const Navbar = () => {
     itemCount = itemCount + cart[key].qty
   }
 
+  const hideMobileNav = () => {
+    setShowMobileNav(false)
+  }
+
   return (
     <>
       <nav className={`navbarComponent ${isSticky ? 'sticky' : ''}`}>
@@ -102,22 +106,39 @@ const Navbar = () => {
           <div className={showMobileNav ? 'nav-links-mobile' : 'nav-links'}>
             <ul>
               <li>
-                <NavLink exact='true' to='/' activeclassname='active'>
+                <NavLink
+                  exact='true'
+                  to='/'
+                  activeclassname='active'
+                  onClick={hideMobileNav}
+                >
                   Home
                 </NavLink>
               </li>
               <li>
-                <NavLink to='/menu' activeclassname='active'>
+                <NavLink
+                  to='/menu'
+                  activeclassname='active'
+                  onClick={hideMobileNav}
+                >
                   Menu
                 </NavLink>
               </li>
               <li>
-                <NavLink to='/services' activeclassname='active'>
+                <NavLink
+                  to='/services'
+                  activeclassname='active'
+                  onClick={hideMobileNav}
+                >
                   Services
                 </NavLink>
               </li>
               <li>
-                <NavLink to='/cart' className='flex items-center'>
+                <NavLink
+                  to='/cart'
+                  className='flex items-center'
+                  onClick={hideMobileNav}
+                >
                   Cart
                   <span className='counter-wrap ml-1'>
                     <span className='cart-counter'>{`${itemCount}`}</span>
