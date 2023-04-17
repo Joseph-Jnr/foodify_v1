@@ -1,45 +1,23 @@
-/* .single-food-card {
-  background: var(--off-white);
-  border-radius: 10px;
-  position: relative;
-  padding: 20px;
-  width: 400px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
-  align-items: center;
-} */
 .single-food-card {
-  background: var(--off-white);
+  background: transparent;
   border-radius: 10px;
   position: relative;
-  width: 320px;
+  max-width: 320px;
   margin: 0 auto;
 }
-/* 
-.single-food-card .img-area {
-  position: relative;
-  background: #0d1523;
-  width: 150px;
-  height: 150px;
-  border-radius: 10px;
-  overflow: hidden;
-} */
 
 .single-food-card .img-area {
   position: relative;
   background: #0d1523;
-  width: 150px;
   height: 180px;
   overflow: hidden;
-  border-radius: 10px 10px 0px 0px;
-  width: 100%;
+  border-radius: 10px;
   display: grid;
   justify-content: center;
 }
 
 .single-food-card .img-area img {
-  width: auto;
+  width: 100%;
   height: auto;
   transition: all 0.5s ease-in-out;
 }
@@ -51,8 +29,10 @@
 
 .single-food-card .content {
   width: 100%;
-  padding: 20px;
-  padding-bottom: 35px;
+  padding: 20px 0;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .single-food-card .content h1 {
@@ -65,7 +45,7 @@
   color: var(--teal-black);
   font-weight: 300;
   font-size: 14px;
-  margin-bottom: 10px;
+  margin-bottom: 1px;
 }
 
 .price span {
@@ -84,21 +64,42 @@
   bottom: 40px;
 }
 
-html.dark .single-food-card {
-  background: var(--dark-mid);
-}
-
 html.dark .single-food-card .content h1,
 html.dark .price span {
   color: #d3e2f7;
 }
 
-html.dark .single-food-card .content p {
+html.dark .single-food-card .content p,
+html.dark .price span {
   color: #8796ab;
 }
 
 @media screen and (max-width: 765px) {
   .single-food-card {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .single-food-card .img-area {
+    height: 100px;
+  }
+
+  .single-food-card .content {
+    flex-direction: column;
+  }
+
+  .single-food-card .content h1 {
+    font-size: 16px;
+  }
+
+  .single-food-card .content p {
+    font-size: 12px;
+  }
+
+  .price span {
+    font-size: 12px;
+  }
+
+  .price span:nth-child(1) {
+    font-size: 18px;
   }
 }
