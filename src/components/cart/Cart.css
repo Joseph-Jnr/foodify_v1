@@ -25,6 +25,11 @@ main {
   }
 }
 
+html.dark .cart {
+  background: var(--dark-mid);
+  color: #d3e2f7;
+}
+
 .backdrop {
   position: absolute;
   top: 0;
