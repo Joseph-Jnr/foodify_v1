@@ -28,7 +28,7 @@ export const foodList = [
     title: 'Amala and Ewedu',
     category: 'African food',
     price: 1000,
-    delivery: '500 Fcfa delivery fee',
+    delivery: '500 FCFA',
   },
   {
     id: '3',
@@ -52,7 +52,7 @@ export const foodList = [
     title: 'Chicken wings',
     category: 'Chicken',
     price: 6500,
-    delivery: '500 Fcfa delivery fee',
+    delivery: '500 FCFA',
   },
   {
     id: '6',
@@ -60,6 +60,6 @@ export const foodList = [
     title: 'Beef Burger',
     category: 'Burger',
     price: 3000,
-    delivery: '500 Fcfa delivery fee',
+    delivery: '500 FCFA',
   },
 ]
