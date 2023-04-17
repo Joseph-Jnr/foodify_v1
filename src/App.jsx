@@ -5,17 +5,20 @@ import { Navbar, Footer } from './components/index'
 import Home from './pages/Home'
 import Menu from './pages/Menu'
 import Services from './pages/Services'
+import { Provider } from './context'
 
 function App() {
   return (
     <main>
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/menu' element={<Menu />} />
-        <Route path='/services' element={<Services />} />
-      </Routes>
-      <Footer />
+      <Provider>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/menu' element={<Menu />} />
+          <Route path='/services' element={<Services />} />
+        </Routes>
+        <Footer />
+      </Provider>
     </main>
   )
 }

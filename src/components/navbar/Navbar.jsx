@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { MdShoppingBasket, MdLightMode } from 'react-icons/md'
 import { CiDark, CiLogin } from 'react-icons/ci'
 import { RiArrowDownSLine, RiServiceLine } from 'react-icons/ri'
@@ -6,6 +6,7 @@ import { BiHomeAlt, BiFoodMenu } from 'react-icons/bi'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import './Navbar.css'
 import Button from '../UI/button/Button'
+import { Context } from '../../context'
 
 const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false)
@@ -69,6 +70,15 @@ const Navbar = () => {
     }
   }, [])
 
+  const { state } = useContext(Context)
+  console.log('---->', state)
+
+  const { cart } = state
+  let itemCount = 0
+  for (const [key, value] of Object.entries(cart)) {
+    itemCount = itemCount + cart[key].qty
+  }
+
   return (
     <>
       <nav className={`navbarComponent ${isSticky ? 'sticky' : ''}`}>
@@ -110,7 +120,7 @@ const Navbar = () => {
                 <NavLink to='/cart' className='flex items-center'>
                   Cart
                   <span className='counter-wrap ml-1'>
-                    <span className='cart-counter'>2</span>
+                    <span className='cart-counter'>{`${itemCount}`}</span>
                     <span className='cart-icon'>
                       <MdShoppingBasket />
                     </span>

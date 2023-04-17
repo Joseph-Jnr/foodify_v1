@@ -18,11 +18,7 @@ const Quote = () => {
             <i>
               "Good food is not only essential for nourishment but also for
               enjoyment. It has the power to bring people together, create
-              memories, and evoke emotions. Good food is not just about taste
-              but also about the quality and freshness of the ingredients, the
-              skill of the cook, and the presentation of the dish. It can be
-              simple or complex, traditional or experimental, but what matters
-              is the care and attention that goes into its creation."
+              memories, and evoke emotions."
             </i>
           </div>
         </div>
