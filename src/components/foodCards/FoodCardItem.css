@@ -49,11 +49,12 @@
 }
 
 .price span {
-  font-size: 14px;
+  font-size: 13px;
+  color: #996f07;
 }
 
 .price span:nth-child(1) {
-  font-size: 23px;
+  font-size: 20px;
   font-weight: 700;
 }
 
@@ -64,13 +65,11 @@
   bottom: 40px;
 }
 
-html.dark .single-food-card .content h1,
-html.dark .price span {
+html.dark .single-food-card .content h1 {
   color: #d3e2f7;
 }
 
-html.dark .single-food-card .content p,
-html.dark .price span {
+html.dark .single-food-card .content p {
   color: #8796ab;
 }
 
