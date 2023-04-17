@@ -19,7 +19,7 @@ const Cta = () => {
               <div className='qr-scan flex justify-center'>
                 <img src={qrCode} alt='' />
               </div>
-              <Button btnClass={'black-btn'} href={''} text={'Contact us'} />
+              <Button btnClass={'black-btn'} text={'Contact us'} />
             </div>
           </div>
         </div>
