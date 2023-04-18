@@ -41,7 +41,14 @@ html.dark .quote-txt i {
   }
 
   .quote-wrap .quote-img img {
-    width: 300px;
-    height: auto;
+    /* width: 300px;
+    height: auto; */
+    display: none;
+  }
+}
+
+@media screen and (max-height: 650px) {
+  .quote-wrap {
+    margin-top: 120px;
   }
 }
