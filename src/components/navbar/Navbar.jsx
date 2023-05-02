@@ -1,13 +1,18 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { MdShoppingBasket, MdLightMode } from 'react-icons/md'
 import { CiDark, CiLogin } from 'react-icons/ci'
-import { RiArrowDownSLine, RiServiceLine } from 'react-icons/ri'
+import {
+  RiArrowDownSLine,
+  RiServiceLine,
+  RiShoppingBasketFill,
+} from 'react-icons/ri'
 import { BiHomeAlt, BiFoodMenu } from 'react-icons/bi'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import './Navbar.css'
 import Button from '../UI/button/Button'
-import { Context } from '../../context'
 import Cart from '../cart/Cart'
+import { useSelector } from 'react-redux'
+import { BsBasket2Fill } from 'react-icons/bs'
 
 const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false)
@@ -19,6 +24,9 @@ const Navbar = () => {
   const [showCartModal, setShowCartModal] = useState(false)
 
   const [rotateIcon, setRotateIcon] = useState(false)
+
+  // Cart items counter
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity)
 
   const toggleMobileNav = () => {
     setShowMobileNav(!showMobileNav)
@@ -73,15 +81,6 @@ const Navbar = () => {
         .removeEventListener('change', handleColorSchemeChange)
     }
   }, [])
-
-  const { state } = useContext(Context)
-  //console.log('---->', state)
-
-  const { cart } = state
-  let itemCount = 0
-  for (const [key, value] of Object.entries(cart)) {
-    itemCount = itemCount + cart[key].qty
-  }
 
   const hideMobileNav = () => {
     setShowMobileNav(false)
@@ -173,9 +172,9 @@ const Navbar = () => {
               onClick={showCart}
             >
               <span className='counter-wrap ml-1'>
-                <span className='cart-counter'>{`${itemCount}`}</span>
+                <span className='cart-counter'>{totalQuantity}</span>
                 <span className='cart-icon'>
-                  <MdShoppingBasket />
+                  <BsBasket2Fill />
                 </span>
               </span>
             </div>

@@ -1,13 +1,24 @@
-import React, { useState, useContext } from 'react'
+import React, { useState } from 'react'
 import './FoodCardItem.css'
 import { MdShoppingBasket } from 'react-icons/md'
 import { AiOutlineTags } from 'react-icons/ai'
 import { TbTruckDelivery } from 'react-icons/tb'
 import Button from '../UI/button/Button'
-import { Context } from '../../context'
+//import { Context } from '../../context'
 import { foodList } from './data'
+import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { cartActions } from '../../store/shopping-cart/cartSlice'
 
-const FoodCardItem = ({ image, title, category, delivery, price }) => {
+const FoodCardItem = ({
+  id,
+  image,
+  title,
+  category,
+  delivery,
+  slug,
+  price,
+}) => {
   const [isHovered, setIsHovered] = useState(false)
 
   const handleMouseEnter = () => {
@@ -18,7 +29,18 @@ const FoodCardItem = ({ image, title, category, delivery, price }) => {
     setIsHovered(false)
   }
 
-  const { dispatch } = useContext(Context)
+  const dispatch = useDispatch()
+
+  const addToCart = () => {
+    dispatch(
+      cartActions.addItem({
+        id,
+        title,
+        image,
+        price,
+      })
+    )
+  }
 
   return (
     <div className='single-food-card'>
@@ -34,9 +56,7 @@ const FoodCardItem = ({ image, title, category, delivery, price }) => {
               icon={<MdShoppingBasket />}
               btnClass={'black-btn hasIcon'}
               iconClass={'flex items-center justify-center'}
-              onClick={() => {
-                dispatch({ type: 'ADD_TO_CART', payload: foodList })
-              }}
+              onClick={addToCart}
               text={'Add to cart'}
             />
           </div>
@@ -45,7 +65,9 @@ const FoodCardItem = ({ image, title, category, delivery, price }) => {
       </div>
       <div className='content'>
         <div className='description'>
-          <h1>{title}</h1>
+          <Link to={`/foods/${slug}`}>
+            <h1>{title}</h1>
+          </Link>
           <p className='flex items-center'>
             <span className='mr-1'>
               <AiOutlineTags />

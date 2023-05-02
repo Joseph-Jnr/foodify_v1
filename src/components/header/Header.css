@@ -50,7 +50,7 @@ html.dark .main-header .text-area h1 span.typed-text {
 }
 
 html.dark .main-header .text-area p {
-  color: #8796ab;
+  color: var(--light-blue-accent);
 }
 
 .main-header .text-area h1 span.cursor.typing {

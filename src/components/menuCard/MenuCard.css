@@ -10,7 +10,7 @@
 
 html.dark .menu {
   background: var(--black);
-  color: #d3e2f7;
+  color: var(--light-blue);
 }
 
 .menu-card {
@@ -83,7 +83,7 @@ html.dark .menu {
 }
 
 html.dark .menu-card .single-item .item-meta p {
-  color: #d3e2f7;
+  color: var(--light-blue);
 }
 
 /* Responsive */

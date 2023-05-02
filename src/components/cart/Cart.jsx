@@ -2,8 +2,14 @@ import React, { useState } from 'react'
 import './Cart.css'
 import { GrFormClose } from 'react-icons/gr'
 import cartImg from '../../assets/icons/empty-cart.png'
+import CartItem from './CartItem'
+import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const Cart = ({ handleClose, open }) => {
+  const cartProducts = useSelector((state) => state.cart.cartItems)
+  const totalAmount = useSelector((state) => state.cart.totalAmount)
+
   return (
     <>
       {open && (
@@ -22,12 +28,35 @@ const Cart = ({ handleClose, open }) => {
               </div>
             </div>
 
-            <div className='cart-body mt-16'>
-              <img src={cartImg} className='img-fluid' alt='empty cart' />
-              <p className='flex justify-center font-semibold'>
-                Oooops! Your cart is empty
-              </p>
-            </div>
+            {cartProducts.length === 0 ? (
+              <div className='cart-body mt-8'>
+                <div className='empty-cart'>
+                  <img src={cartImg} className='img-fluid' alt='empty cart' />
+                  <p className='flex justify-center font-semibold'>
+                    Oooops! Your cart is empty
+                  </p>
+                </div>
+              </div>
+            ) : (
+              <div className='cart-body mt-8'>
+                <div className='cart-item-list'>
+                  {cartProducts.map((item, index) => (
+                    <CartItem item={item} key={index} />
+                  ))}
+                </div>
+
+                <div className='cart-bottom'>
+                  <h6>
+                    Subtotal: <span>{totalAmount.toLocaleString()}</span> FCFA
+                  </h6>
+                  <div className='text-center'>
+                    <Link to='/checkout' onClick={handleClose}>
+                      <button className='checkout-btn'>Checkout</button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </>
       )}

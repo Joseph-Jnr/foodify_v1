@@ -93,12 +93,12 @@
 }
 
 html.dark .single-food-card .content h1 {
-  color: #d3e2f7;
+  color: var(--light-blue);
 }
 
 html.dark .single-food-card .content p,
 html.dark .price span {
-  color: #8796ab;
+  color: var(--light-blue-accent);
 }
 
 @media screen and (max-width: 765px) {

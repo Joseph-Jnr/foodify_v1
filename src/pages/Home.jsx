@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <>
       <Header />
-      <Quote />
+      {/* <Quote /> */}
       <FoodCard />
       <Cta />
     </>

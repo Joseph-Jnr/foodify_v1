@@ -23,7 +23,7 @@ html.dark .quote-section {
 }
 
 html.dark .quote-txt i {
-  color: #8796ab;
+  color: var(--light-blue-accent);
 }
 
 @media screen and (max-width: 765px) {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './FoodCard.css'
 import FoodCardItem from './FoodCardItem'
 import { foodList } from './data'
@@ -20,11 +20,14 @@ const FoodCard = () => {
     setActiveCategory(category)
   }
 
+  // useMemo and useCallback for the filter bar
+
   const filteredFoodList =
     activeCategory === 'All'
       ? foodList
       : foodList.filter((food) => food.category === activeCategory)
 
+  // display items randomly
   const shuffle = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1))
@@ -159,6 +162,7 @@ const FoodCard = () => {
           {filteredFoodList.map((food, index) => (
             <FoodCardItem
               key={index}
+              slug={food.slug}
               image={food.image}
               title={food.title}
               category={food.category}

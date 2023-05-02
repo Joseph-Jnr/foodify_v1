@@ -46,7 +46,7 @@ html.dark .cta-text h1 {
 }
 
 html.dark .cta-text p {
-  color: #8796ab;
+  color: var(--light-blue-accent);
 }
 
 .cta-section-wrap .qr-scan img {

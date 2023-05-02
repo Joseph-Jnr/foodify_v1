@@ -69,7 +69,7 @@ nav .nav-links-mobile li a {
 }
 
 html.dark nav .nav-links-mobile li a {
-  color: #8796ab;
+  color: var(--light-blue-accent);
 }
 
 nav .nav-links-mobile li > a.active,
