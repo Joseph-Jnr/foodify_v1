@@ -25,6 +25,8 @@ export const foodList = [
     category: 'Italian',
     price: 3500,
     delivery: 'Free Delivery',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.',
   },
   {
     id: 2,
@@ -34,6 +36,8 @@ export const foodList = [
     category: 'African food',
     price: 1000,
     delivery: '500 FCFA',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.',
   },
   {
     id: 3,
@@ -43,6 +47,8 @@ export const foodList = [
     category: 'African food',
     price: 2000,
     delivery: 'Free Delivery',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.',
   },
   {
     id: 4,
@@ -52,6 +58,8 @@ export const foodList = [
     category: 'Burger',
     price: 1500,
     delivery: 'Free Delivery',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.',
   },
   {
     id: 5,
@@ -61,6 +69,8 @@ export const foodList = [
     category: 'Chicken',
     price: 6500,
     delivery: '500 FCFA',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.',
   },
   {
     id: 6,
@@ -70,6 +80,8 @@ export const foodList = [
     category: 'Burger',
     price: 3000,
     delivery: '500 FCFA',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.',
   },
   {
     id: 7,
@@ -80,6 +92,8 @@ export const foodList = [
     category: 'Small chops',
     price: 800,
     delivery: 'Free Delivery',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.',
   },
   {
     id: 8,
@@ -90,6 +104,8 @@ export const foodList = [
     category: 'Drinks',
     price: 1800,
     delivery: 'Free Delivery',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.',
   },
 ]
 // loop through foodList array and add slug property to each object

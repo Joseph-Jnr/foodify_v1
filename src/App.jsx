@@ -5,20 +5,23 @@ import { Navbar, Footer } from './components/index'
 import Home from './pages/Home'
 import Menu from './pages/Menu'
 import Services from './pages/Services'
-import Login from './pages/Login'
+import LoginPage from './pages/LoginPage'
 import Error404 from './pages/Error404'
 import ProductDetail from './pages/ProductDetail'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
     <main>
       <Navbar />
+
+      <ScrollToTop />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/menu' element={<Menu />} />
         <Route path='/services' element={<Services />} />
         <Route path='/foods/:slug' element={<ProductDetail />} />
-        <Route path='/login' element={<Login />} />
+        <Route path='/login' element={<LoginPage />} />
         <Route path='*' element={<Error404 />} />
       </Routes>
       <Footer />

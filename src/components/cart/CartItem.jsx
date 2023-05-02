@@ -43,7 +43,7 @@ const CartItem = ({ item }) => {
           <h4>{title}</h4>
           <div className='product-price'>
             <p>
-              <span>{totalPrice.toLocaleString()}</span>{' '}
+              <span>{price.toLocaleString()}</span>{' '}
               <span className='font-light'>FCFA</span>
             </p>
           </div>

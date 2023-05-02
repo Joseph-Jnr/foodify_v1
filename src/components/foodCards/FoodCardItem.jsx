@@ -2,13 +2,14 @@ import React, { useState } from 'react'
 import './FoodCardItem.css'
 import { MdShoppingBasket } from 'react-icons/md'
 import { AiOutlineTags } from 'react-icons/ai'
-import { TbTruckDelivery } from 'react-icons/tb'
+import { TbScanEye, TbTruckDelivery } from 'react-icons/tb'
 import Button from '../UI/button/Button'
 //import { Context } from '../../context'
 import { foodList } from './data'
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { cartActions } from '../../store/shopping-cart/cartSlice'
+import { BsBasket2Fill } from 'react-icons/bs'
 
 const FoodCardItem = ({
   id,
@@ -51,14 +52,23 @@ const FoodCardItem = ({
       >
         <img src={image} alt='food image' />
         {isHovered && (
-          <div className='btns'>
-            <Button
-              icon={<MdShoppingBasket />}
-              btnClass={'black-btn hasIcon'}
-              iconClass={'flex items-center justify-center'}
-              onClick={addToCart}
-              text={'Add to cart'}
-            />
+          <div className='btns flex'>
+            <div>
+              <Button
+                icon={<BsBasket2Fill />}
+                btnClass={'default-btn isIconOnly'}
+                iconClass={'flex items-center justify-center'}
+                onClick={addToCart}
+              />
+            </div>
+            <div className='mx-3'></div>
+            <Link to={`/foods/${slug}`}>
+              <Button
+                icon={<TbScanEye />}
+                btnClass={'default-btn isIconOnly'}
+                iconClass={'flex items-center justify-center'}
+              />
+            </Link>
           </div>
         )}
         {isHovered && <div className='overlay'></div>}
