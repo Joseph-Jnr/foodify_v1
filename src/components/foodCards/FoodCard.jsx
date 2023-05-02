@@ -162,6 +162,7 @@ const FoodCard = () => {
           {filteredFoodList.map((food, index) => (
             <FoodCardItem
               key={index}
+              id={food.id}
               slug={food.slug}
               image={food.image}
               title={food.title}
