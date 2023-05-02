@@ -1,0 +1,100 @@
+.form-top-area h2 {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.form-top-area span {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.form-field {
+  position: relative;
+}
+
+.form-field input {
+  border: 1px solid #dadada;
+  height: 50px;
+  width: 400px;
+  border-radius: 6px;
+  margin: 15px auto;
+  padding: 0px 20px;
+  font-size: 14px;
+  font-weight: 300;
+  transition: all 0.5s ease-in-out;
+}
+
+.form-field input:focus,
+.form-field input:active {
+  border: 1px solid #fce88e !important;
+  outline: none;
+}
+
+.form-field label {
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  font-size: 13px;
+  background: #fff;
+  color: #878787;
+  padding: 8px 10px;
+}
+
+.form-btns {
+  align-items: center;
+}
+
+.form-btns button {
+  background: var(--black);
+  padding: 12px 35px;
+  border-radius: 6px;
+  color: var(--light-blue);
+}
+
+.form-btns p {
+  font-size: 14px;
+  color: var(--teal-black);
+}
+
+html.dark .form-section {
+  background: var(--black);
+  color: var(--light-blue);
+}
+
+html.dark .form-field input {
+  background: transparent;
+  border: 1px solid var(--light-blue-accent);
+}
+
+html.dark .form-field label {
+  background: var(--black);
+}
+
+html.dark .form-top-area span,
+html.dark .form-field label {
+  color: var(--light-blue-acccent);
+}
+
+html.dark .form-btns button {
+  background: var(--light-orange);
+  padding: 12px 35px;
+  border-radius: 6px;
+  color: var(--black);
+}
+
+.error-msg {
+  background: rgb(255, 207, 207);
+  border: 1px solid rgb(157, 108, 108);
+  text-align: center;
+  color: var(--black);
+  padding: 10px;
+  border-radius: 9px;
+  margin-bottom: 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 765px) {
+  .form-field input {
+    max-width: 300px;
+  }
+}

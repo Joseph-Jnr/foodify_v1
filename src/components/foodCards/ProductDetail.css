@@ -1,10 +1,10 @@
-.img-area {
+.product-detail-section .preview-img-area {
   height: 400px;
   overflow: hidden;
   border-radius: 10px;
 }
 
-.img-area img {
+.product-detail-section .preview-img-area img {
   width: 900px;
   height: auto;
   border-radius: 10px;
@@ -46,7 +46,7 @@ html.dark .product-details .meta span {
 }
 
 @media screen and (max-width: 765px) {
-  .img-area {
+  .product-detail-section .preview-img-area {
     height: auto;
     overflow: hidden;
     border-radius: 10px;

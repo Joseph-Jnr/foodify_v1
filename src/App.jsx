@@ -9,6 +9,7 @@ import LoginPage from './pages/LoginPage'
 import Error404 from './pages/Error404'
 import ProductDetail from './pages/ProductDetail'
 import ScrollToTop from './components/ScrollToTop'
+import RegisterPage from './pages/RegisterPage'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path='/services' element={<Services />} />
         <Route path='/foods/:slug' element={<ProductDetail />} />
         <Route path='/login' element={<LoginPage />} />
+        <Route path='/register' element={<RegisterPage />} />
         <Route path='*' element={<Error404 />} />
       </Routes>
       <Footer />

@@ -3,10 +3,15 @@ import { v4 as uuidv4 } from 'uuid'
 import './FormStyle.css'
 import { Link } from 'react-router-dom'
 
-const Login = () => {
+const Register = () => {
+  const [username, setUsername] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [errorMessage, setErrorMessage] = useState('')
+
+  const handleUsernameChange = (event) => {
+    setUsername(event.target.value)
+  }
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value)
@@ -19,32 +24,31 @@ const Login = () => {
   const handleSubmit = (event) => {
     event.preventDefault()
 
-    // Validate user credentials
-    if (email === 'jojo@gmail.com' && password === 'pass') {
-      // Generate dynamic token
-      const token = uuidv4()
-      // Set user authentication token in local storage
-      localStorage.setItem('token', token)
-      // Redirect to home page
-      window.location.href = '/'
-    } else {
-      setErrorMessage('Invalid email or password')
-      setTimeout(() => {
-        setErrorMessage('')
-      }, 3000)
-    }
+    // Redirect to home page
+    window.location.href = '/'
   }
 
   return (
     <div className='section-padding form-section'>
       <div className='container section-padding flex justify-center'>
-        <div className='form-wrap mt-5'>
+        <div className='form-wrap'>
           <div className='form-top-area text-center mb-9'>
-            <h2>Sign in to Foodify</h2>
+            <h2>Create an account</h2>
             <span>Enter your details below</span>
           </div>
           <form onSubmit={handleSubmit}>
-            {errorMessage && <p className='error-msg'>{errorMessage}</p>}
+            {errorMessage && <p>{errorMessage}</p>}
+            <div className='form-field'>
+              <label htmlFor='username'>Username</label>
+              <input
+                type='text'
+                id='username'
+                name='username'
+                value={username}
+                onChange={handleUsernameChange}
+                required
+              />
+            </div>
             <div className='form-field'>
               <label htmlFor='email'>Email</label>
               <input
@@ -69,16 +73,8 @@ const Login = () => {
             </div>
             <div className='form-btns flex justify-between mt-5'>
               <button className='btn-2' type='submit'>
-                Sign in
+                Register
               </button>
-              <Link to='/reset-password'>
-                <p>Forgot password?</p>
-              </Link>
-            </div>
-            <div className='register-section mt-16 text-center'>
-              <p>
-                New here? <Link to='/register'>Create an account</Link>
-              </p>
             </div>
           </form>
         </div>
@@ -87,4 +83,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Register

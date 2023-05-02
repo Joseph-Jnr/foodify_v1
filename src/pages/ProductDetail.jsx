@@ -37,7 +37,7 @@ const ProductDetail = () => {
       <div className='section-padding product-detail-section'>
         <div className='container section-padding'>
           <div className='product-info grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-2'>
-            <div className='img-area'>
+            <div className='preview-img-area'>
               <img src={image} alt={title} />
             </div>
             <div className='product-details'>

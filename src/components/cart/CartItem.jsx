@@ -10,7 +10,7 @@ const CartItem = ({ item }) => {
 
   const dispatch = useDispatch()
 
-  const incrementItem = (event) => {
+  const incrementItem = () => {
     dispatch(
       cartActions.addItem({
         id,
@@ -20,12 +20,12 @@ const CartItem = ({ item }) => {
         totalPrice,
       })
     )
-    event.stopPropagation()
+    //event.stopPropagation()
   }
 
-  const decreaseItem = (event) => {
+  const decreaseItem = () => {
     dispatch(cartActions.removeItem(id))
-    event.stopPropagation()
+    //event.stopPropagation()
   }
 
   const deleteItem = (event) => {
@@ -49,11 +49,11 @@ const CartItem = ({ item }) => {
           </div>
         </div>
         <div className='product-qty-btns flex justify-center mx-5'>
-          <span onClick={(event) => decreaseItem(event)}>
+          <span onClick={decreaseItem}>
             <BsDashSquareFill />
           </span>
           <span>{quantity}</span>
-          <span onClick={(event) => incrementItem(event)}>
+          <span onClick={incrementItem}>
             <BsFillPlusSquareFill />
           </span>
         </div>
