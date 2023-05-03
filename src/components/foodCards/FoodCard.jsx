@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react'
 import './FoodCard.css'
 import FoodCardItem from './FoodCardItem'
-import { foodList } from './data'
+import { foodList } from '../../api/foodData'
 import {
   GiHamburger,
   GiFoodChain,

@@ -7,7 +7,7 @@ import { MdShoppingBasket } from 'react-icons/md'
 import Button from '../components/UI/button/Button'
 import FoodCardItem from '../components/foodCards/FoodCardItem'
 import { cartActions } from '../store/shopping-cart/cartSlice'
-import { foodList } from '../components/foodCards/data'
+import { foodList } from '../api/foodData'
 import '../components/foodCards/ProductDetail.css'
 
 const ProductDetail = () => {
