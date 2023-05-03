@@ -10,6 +10,7 @@ import Error404 from './pages/Error404'
 import ProductDetail from './pages/ProductDetail'
 import ScrollToTop from './components/ScrollToTop'
 import RegisterPage from './pages/RegisterPage'
+import OrderSummary from './components/orderSummary/OrderSummary'
 
 function App() {
   const location = useLocation()
@@ -30,6 +31,7 @@ function App() {
         <Route path='/foods/:slug' element={<ProductDetail />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/register' element={<RegisterPage />} />
+        <Route path='/order-summary' element={<OrderSummary />} />
         <Route path='*' element={<Error404 />} />
       </Routes>
       {showNavbarAndFooter && <Footer />}

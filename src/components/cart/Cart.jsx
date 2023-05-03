@@ -50,7 +50,7 @@ const Cart = ({ handleClose, open }) => {
                     Subtotal: <span>{totalAmount.toLocaleString()}</span> FCFA
                   </h6>
                   <div className='text-center'>
-                    <Link to='/checkout' onClick={handleClose}>
+                    <Link to='/order-summary' onClick={handleClose}>
                       <button className='checkout-btn'>Checkout</button>
                     </Link>
                   </div>

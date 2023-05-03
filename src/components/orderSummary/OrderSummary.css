@@ -1,0 +1,59 @@
+.order-summary-section {
+  background: hsl(212, 45%, 89%);
+}
+
+.summary-wrap {
+  background: #fff;
+  width: 600px;
+  border-radius: 16px;
+  padding: 17px;
+  box-shadow: 0px 0 30px rgba(30, 67, 86, 0.08);
+}
+
+.summary-wrap h1 {
+  font-weight: 500;
+  font-size: 19px;
+}
+
+.order-details-header {
+  border-bottom: 1px solid hsl(220, 15%, 55%);
+}
+
+.order-details .single-order-detail:not(:last-child) {
+  border-bottom: 1px solid hsl(212, 45%, 89%);
+}
+
+.order-details .single-order-detail .title {
+  width: 102px;
+}
+
+.form-payment-methods {
+  position: relative;
+  padding: 20px;
+  border-radius: 9px;
+}
+
+/* Dark styles */
+html.dark .order-summary-section {
+  background: var(--dark-mid);
+  color: var(--light-blue);
+}
+
+html.dark .summary-wrap {
+  background: var(--black);
+}
+
+html.dark .order-details .single-order-detail,
+html.dark .summary-footer p {
+  color: var(--light-blue-accent);
+}
+
+html.dark .form-payment-methods {
+  background: var(--light-blue);
+}
+
+.divider-v {
+  height: 100%;
+  width: 2px;
+  background: var(--black);
+}
