@@ -34,10 +34,10 @@ const OrderSummary = () => {
           <ToastContainer hideProgressBar={true} />
 
           {/* Details header */}
-          <div className='order-details-header mt-14 flex justify-between font-extrabold py-2'>
+          <div className='order-details-header mt-14  grid grid-cols-3 gap-9 font-extrabold py-2'>
             <div className='title'>Product</div>
-            <div className='qty'>Qty</div>
-            <div className='amt'>Price</div>
+            <div className='qty text-center'>Qty</div>
+            <div className='amt text-right'>Price</div>
           </div>
 
           {/* Order details */}

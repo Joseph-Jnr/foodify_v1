@@ -23,10 +23,6 @@
   border-bottom: 1px solid hsl(212, 45%, 89%);
 }
 
-.order-details .single-order-detail .title {
-  width: 102px;
-}
-
 .form-payment-methods {
   position: relative;
   padding: 20px;
