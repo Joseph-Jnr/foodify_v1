@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback, useMemo } from 'react'
 import './FoodCard.css'
 import FoodCardItem from './FoodCardItem'
 import { foodList } from './data'
@@ -16,16 +16,18 @@ import noItemImg from '../../assets/icons/out-of-stock.webp'
 const FoodCard = () => {
   const [activeCategory, setActiveCategory] = useState('All')
 
-  const handleCategoryClick = (category) => {
+  // useMemo and useCallback for the filter bar to reduce the number of unnecessary re-renders
+  const handleCategoryClick = useCallback((category) => {
     setActiveCategory(category)
-  }
+  }, [])
 
-  // useMemo and useCallback for the filter bar
-
-  const filteredFoodList =
-    activeCategory === 'All'
-      ? foodList
-      : foodList.filter((food) => food.category === activeCategory)
+  const filteredFoodList = useMemo(() => {
+    if (activeCategory === 'All') {
+      return foodList
+    } else {
+      return foodList.filter((food) => food.category === activeCategory)
+    }
+  }, [activeCategory])
 
   // display items randomly
   const shuffle = (array) => {

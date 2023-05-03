@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import './App.css'
 import { Navbar, Footer } from './components/index'
 import Home from './pages/Home'
@@ -12,9 +12,15 @@ import ScrollToTop from './components/ScrollToTop'
 import RegisterPage from './pages/RegisterPage'
 
 function App() {
+  const location = useLocation()
+
+  const showNavbarAndFooter = !(
+    location.pathname === '/login' || location.pathname === '/register'
+  )
+
   return (
     <main>
-      <Navbar />
+      {showNavbarAndFooter && <Navbar />}
 
       <ScrollToTop />
       <Routes>
@@ -26,7 +32,7 @@ function App() {
         <Route path='/register' element={<RegisterPage />} />
         <Route path='*' element={<Error404 />} />
       </Routes>
-      <Footer />
+      {showNavbarAndFooter && <Footer />}
     </main>
   )
 }

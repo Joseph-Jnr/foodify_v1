@@ -36,51 +36,57 @@ const Login = () => {
   }
 
   return (
-    <div className='section-padding form-section'>
-      <div className='container section-padding flex justify-center'>
-        <div className='form-wrap mt-5'>
-          <div className='form-top-area text-center mb-9'>
-            <h2>Sign in to Foodify</h2>
-            <span>Enter your details below</span>
+    <div className='form-section flex'>
+      <div className='form-img-bg login'></div>
+      <div className='container section-padding'>
+        <Link to='/' className='form-logo text-center flex justify-center'>
+          Foodify
+        </Link>
+        <div className='flex justify-center'>
+          <div className='form-wrap py-7'>
+            <div className='form-top-area text-center mb-9'>
+              <h2>Welcome back!</h2>
+              <span>Enter your details below</span>
+            </div>
+            <form onSubmit={handleSubmit}>
+              {errorMessage && <p className='error-msg'>{errorMessage}</p>}
+              <div className='form-field'>
+                <label htmlFor='email'>Email</label>
+                <input
+                  type='email'
+                  id='email'
+                  name='email'
+                  value={email}
+                  onChange={handleEmailChange}
+                  required
+                />
+              </div>
+              <div className='form-field'>
+                <label htmlFor='password'>Password</label>
+                <input
+                  type='password'
+                  id='password'
+                  name='password'
+                  value={password}
+                  onChange={handlePasswordChange}
+                  required
+                />
+              </div>
+              <div className='form-btns flex justify-between mt-5'>
+                <button className='btn-2' type='submit'>
+                  Sign in
+                </button>
+                <Link to='/reset-password'>
+                  <p>Forgot password?</p>
+                </Link>
+              </div>
+              <div className='register-section mt-16 text-center'>
+                <p>
+                  New here? <Link to='/register'>Create an account</Link>
+                </p>
+              </div>
+            </form>
           </div>
-          <form onSubmit={handleSubmit}>
-            {errorMessage && <p className='error-msg'>{errorMessage}</p>}
-            <div className='form-field'>
-              <label htmlFor='email'>Email</label>
-              <input
-                type='email'
-                id='email'
-                name='email'
-                value={email}
-                onChange={handleEmailChange}
-                required
-              />
-            </div>
-            <div className='form-field'>
-              <label htmlFor='password'>Password</label>
-              <input
-                type='password'
-                id='password'
-                name='password'
-                value={password}
-                onChange={handlePasswordChange}
-                required
-              />
-            </div>
-            <div className='form-btns flex justify-between mt-5'>
-              <button className='btn-2' type='submit'>
-                Sign in
-              </button>
-              <Link to='/reset-password'>
-                <p>Forgot password?</p>
-              </Link>
-            </div>
-            <div className='register-section mt-16 text-center'>
-              <p>
-                New here? <Link to='/register'>Create an account</Link>
-              </p>
-            </div>
-          </form>
         </div>
       </div>
     </div>
