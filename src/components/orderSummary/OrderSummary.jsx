@@ -45,11 +45,13 @@ const OrderSummary = () => {
             {cartProducts.map((product) => (
               <div
                 key={product.id}
-                className='single-order-detail flex justify-between text-sm py-4'
+                className='single-order-detail grid grid-cols-3 gap-9 text-sm py-4'
               >
                 <div className='title'>{product.title}</div>
-                <div className='qty'>{product.quantity}</div>
-                <div className='amt'>{product.totalPrice.toLocaleString()}</div>
+                <div className='qty text-center'>{product.quantity}</div>
+                <div className='amt text-right'>
+                  {product.totalPrice.toLocaleString()}
+                </div>
               </div>
             ))}
           </div>
