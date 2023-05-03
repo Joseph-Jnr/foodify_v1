@@ -57,6 +57,8 @@ const cartSlice = createSlice({
       ) {
         state.totalQuantity++
         existingItem.quantity++
+        existingItem.totalPrice =
+          Number(existingItem.quantity) * Number(existingItem.price) // Update totalPrice
       } else {
         const value = JSON.parse(localStorage.getItem('cartItems'))
         let index = value.findIndex((s) => s.id === existingItem.id)
@@ -100,7 +102,7 @@ const cartSlice = createSlice({
       } else {
         existingItem.quantity--
         existingItem.totalPrice =
-          Number(existingItem.totalPrice) - Number(existingItem.price)
+          Number(existingItem.price) * Number(existingItem.quantity)
       }
 
       state.totalAmount = state.cartItems.reduce(
