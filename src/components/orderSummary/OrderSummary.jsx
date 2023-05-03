@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useSelector } from 'react-redux'
 import './OrderSummary.css'
 import '../auth/FormStyle.css'
 import { HiOutlineLocationMarker } from 'react-icons/hi'
@@ -9,6 +10,9 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 const OrderSummary = () => {
+  const cartProducts = useSelector((state) => state.cart.cartItems)
+  const totalAmount = useSelector((state) => state.cart.totalAmount)
+
   const [showLocationInput, setShowLocationInput] = useState(false)
   const [userLocation, setUserLocation] = useState(
     'Lot 589 Kpankpan Akpakpa, Cotonou'
@@ -38,21 +42,16 @@ const OrderSummary = () => {
 
           {/* Order details */}
           <div className='order-details mt-5'>
-            <div className='single-order-detail flex justify-between text-sm py-4'>
-              <div className='title'>Amala and Ewedu</div>
-              <div className='qty'>1</div>
-              <div className='amt'>2,500 FCFA</div>
-            </div>
-            <div className='single-order-detail flex justify-between text-sm py-4'>
-              <div className='title'>Cheese Burger</div>
-              <div className='qty'>1</div>
-              <div className='amt'>5,000 FCFA</div>
-            </div>
-            <div className='single-order-detail flex justify-between text-sm py-4'>
-              <div className='title'>Panache (25cl)</div>
-              <div className='qty'>5</div>
-              <div className='amt'>4,250 FCFA</div>
-            </div>
+            {cartProducts.map((product) => (
+              <div
+                key={product.id}
+                className='single-order-detail flex justify-between text-sm py-4'
+              >
+                <div className='title'>{product.title}</div>
+                <div className='qty'>{product.quantity}</div>
+                <div className='amt'>{product.totalPrice.toLocaleString()}</div>
+              </div>
+            ))}
           </div>
 
           {/* User's delivery location */}
@@ -92,7 +91,7 @@ const OrderSummary = () => {
           {/* Summary footer */}
           <div className='summary-footer text-right mt-12'>
             <h1 className='font-bold'>
-              Total: <span>12,750</span>
+              Total: <span>{totalAmount.toLocaleString()}</span>
             </h1>
             <p className='text-sm'>
               Delivery fee: <span>1,000</span> FCFA
