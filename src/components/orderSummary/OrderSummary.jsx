@@ -6,7 +6,7 @@ import { HiOutlineLocationMarker } from 'react-icons/hi'
 import paystackLogo from '../../assets/icons/paystack.png'
 import kkiapayLogo from '../../assets/icons/kkiapay.png'
 import { Link } from 'react-router-dom'
-import { ToastContainer, toast } from 'react-toastify'
+import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 const OrderSummary = () => {
@@ -31,7 +31,6 @@ const OrderSummary = () => {
       <div className='container pt-28 pb-16 flex justify-center'>
         <div className='summary-wrap'>
           <h1 className='text-center'>Your Order Summary</h1>
-          <ToastContainer hideProgressBar={true} />
 
           {/* Details header */}
           <div className='order-details-header mt-14  grid grid-cols-3 gap-9 font-extrabold py-2'>
