@@ -120,15 +120,20 @@ html.dark .checkout-btn {
   .cart {
     position: fixed;
     bottom: 0;
-    height: 70vh;
+    height: auto;
     width: 100%;
     border-radius: 25px 25px 0px 0px;
     animation: slide-in-up 1s ease forwards;
   }
 
   .cart-item-list {
-    height: 230px;
+    height: auto;
+    max-height: 290px;
     overflow-y: scroll;
+  }
+
+  .empty-cart {
+    padding: 60px 0;
   }
 
   .cart-item-list::-webkit-scrollbar,
@@ -138,9 +143,9 @@ html.dark .checkout-btn {
   }
 
   .cart-bottom {
-    position: absolute;
-    bottom: 15px;
-    width: 90%;
+    position: relative;
+    bottom: 0;
+    width: 100%;
   }
 
   .cart-bottom h6 {
