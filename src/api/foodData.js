@@ -32,7 +32,7 @@ export const foodList = [
     id: 2,
     uuid: uuidv4(),
     image: foodImg2,
-    title: 'Amala and Ewedu',
+    title: 'Semo and Vegetable',
     category: 'African food',
     price: 1000,
     delivery: '500 FCFA',
