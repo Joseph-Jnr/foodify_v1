@@ -82,7 +82,10 @@ const Login = () => {
               </div>
               <div className='register-section mt-16 text-center'>
                 <p>
-                  New here? <Link to='/register'>Create an account</Link>
+                  New here?{' '}
+                  <Link to='/register'>
+                    <span>Create an account</span>
+                  </Link>
                 </p>
               </div>
             </form>

@@ -24,6 +24,10 @@
   font-weight: 300;
 }
 
+html.dark .product-details .meta span > span {
+  color: var(--light-blue-accent);
+}
+
 .product-details .price span {
   font-size: 29px;
 }

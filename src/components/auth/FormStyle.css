@@ -143,6 +143,11 @@ html.dark .form-btns button {
   color: var(--black);
 }
 
+html.dark .form-btns p,
+html.dark .register-section span {
+  color: var(--light-blue-accent);
+}
+
 .error-msg {
   background: rgb(255, 222, 222);
   border: 1px solid rgba(157, 108, 108, 0.45);
