@@ -26,7 +26,7 @@ const MenuItem = ({ id, image, title, category, slug, price }) => {
             {category}
           </p>
           <h5 className='mt-3 text-xl font-bold'>
-            {price} <span className='text-sm'>FCFA</span>
+            {price.toLocaleString()} <span className='text-sm'>FCFA</span>
           </h5>
         </div>
       </div>

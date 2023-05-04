@@ -1,12 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { MdShoppingBasket, MdLightMode } from 'react-icons/md'
+import { MdLightMode } from 'react-icons/md'
 import { CiDark, CiLogin } from 'react-icons/ci'
-import {
-  RiArrowDownSLine,
-  RiServiceLine,
-  RiShoppingBasketFill,
-} from 'react-icons/ri'
-import { BiHomeAlt, BiFoodMenu } from 'react-icons/bi'
+import { RiArrowDownSLine } from 'react-icons/ri'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import './Navbar.css'
 import Button from '../UI/button/Button'

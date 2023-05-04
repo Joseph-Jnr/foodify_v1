@@ -9,8 +9,8 @@ const About = () => {
     <section className='section-padding quote-section'>
       <div className='container section-padding'>
         <div className='quote-wrap'>
-          <div className='quote-img'>
-            <img data-aos='fade-right' src={quoteImg} alt='chef' />
+          <div className='quote-img' data-aos='fade-right'>
+            <img src={quoteImg} alt='chef' />
           </div>
           <div className='quote-txt'>
             <div className='section-header quote-header'>
