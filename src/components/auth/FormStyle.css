@@ -124,14 +124,15 @@ html.dark .form-btns button {
 }
 
 .error-msg {
-  background: rgb(255, 207, 207);
-  border: 1px solid rgb(157, 108, 108);
+  background: rgb(255, 222, 222);
+  border: 1px solid rgba(157, 108, 108, 0.45);
   text-align: center;
   color: var(--black);
   padding: 10px;
   border-radius: 9px;
   margin-bottom: 20px;
   transition: all 0.5s ease-in-out;
+  font-weight: 300;
 }
 
 @media screen and (max-width: 765px) {

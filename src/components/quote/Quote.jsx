@@ -1,25 +1,53 @@
 import React from 'react'
 import quoteImg from '../../assets/quote-img-alt.jpg'
 import './Quote.css'
+import ServiceCard from '../services/ServiceCard'
+import serviceList from '../../api/serviceList'
 
 const Quote = () => {
   return (
     <section className='section-padding quote-section'>
-      <div className='container'>
+      <div className='container section-padding'>
         <div className='quote-wrap'>
           <div className='quote-img'>
             <img src={quoteImg} alt='chef' />
           </div>
           <div className='quote-txt'>
-            <div className='section-header'>
-              <h2>Eat Healthy</h2>
+            <div className='section-header quote-header'>
+              <h2>Welcome to Foodify</h2>
               <div className='text-underline'></div>
             </div>
-            <i>
-              "Good food is not only essential for nourishment but also for
-              enjoyment. It has the power to bring people together, create
-              memories, and evoke emotions."
-            </i>
+            <p className='font-light'>
+              Foodify is your go-to online restaurant for delicious Nigerian,
+              Benin, and other intercontinental dishes. At Foodify, we believe
+              in using fresh, locally-sourced ingredients to create flavorful
+              dishes that cater to all tastes and preferences. Our menu is
+              inspired by the rich culinary traditions of Benin Republic and
+              Nigeria, as well as other intercontinental dishes. We take pride
+              in our authentic recipes and cooking techniques, which are passed
+              down through generations and are a true reflection of our cultural
+              heritage. Our friendly and knowledgeable staff is always ready to
+              assist you with your order and ensure a memorable dining
+              experience. Order now and taste the best of Cotonou and beyond,
+              right from the comfort of your home.
+            </p>
+          </div>
+        </div>
+
+        <div className='services-wrap section-padding mt-24'>
+          <div className='section-header-alt services-header'>
+            <h2>How we serve you</h2>
+            <div className='text-underline'></div>
+          </div>
+          <div className='services-container px-5 md:px-10 grid grid-cols-1 gap-10 md:grid-cols-3 lg:grid-cols-3'>
+            {serviceList.map((services, index) => (
+              <ServiceCard
+                key={index}
+                icon={services.icon}
+                title={services.title}
+                body={services.body}
+              />
+            ))}
           </div>
         </div>
       </div>

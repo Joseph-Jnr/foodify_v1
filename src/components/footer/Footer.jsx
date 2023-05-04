@@ -14,26 +14,17 @@ const Footer = () => {
           <h1>Foodify</h1>
           <span>Global cuisine, delivered with ease</span>
         </div>
-        <div className='footer-links'>
-          <h2>Quick links</h2>
-          <ul>
-            <li>
-              <Link to='/services'> Services</Link>
-            </li>
-            <li>
-              <Link to='/menu'>Menu</Link>
-            </li>
-            <li>
-              <Link to='/dishes'>African dishes</Link>
-            </li>
-            <li>
-              <Link to='/dishes'>Vegetarian dishes</Link>
-            </li>
-          </ul>
+        <div className='footer-hours'>
+          <h2>Opening Hours</h2>
+          <div className='hours'>
+            <p className='font-extrabold'>Monday - Saturday</p>
+            <p className='font-light'>10:00am - 9pm</p>
+          </div>
         </div>
         <div className='footer-contact'>
           <h2>Contact</h2>
-          <p>+22990998277, +2348033562718</p>
+          <p className='mb-4'>hello@foodify.com</p>
+          <p className='mb-11'>+22990998277, +2348033562718</p>
           <div className='payment-methods flex items-center justify-between'>
             <img src={momo} alt='mtn momo' />
             <img src={moov} alt='moov money' />

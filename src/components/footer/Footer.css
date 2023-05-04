@@ -15,25 +15,11 @@
   color: var(--light-orange);
 }
 
-.footer-links ul {
-  list-style: none;
+.footer-hours p {
+  color: var(--light-blue-accent);
 }
 
-.footer-links ul li {
-  padding: 12px 0px;
-}
-
-.footer-links ul li a {
-  color: var(--off-white);
-  font-weight: 200;
-  transition: all 0.5s ease-in-out;
-}
-
-.footer-links ul li a:hover {
-  color: var(--light-orange);
-}
-
-.footer-links h2,
+.footer-hours h2,
 .footer-contact h2 {
   font-size: 20px;
   font-weight: 500;
@@ -42,10 +28,8 @@
 }
 
 .footer-contact p {
-  font-size: 14px;
   font-weight: 100;
-  color: var(--off-white);
-  margin-bottom: 45px;
+  color: var(--light-blue);
 }
 
 .payment-methods img {

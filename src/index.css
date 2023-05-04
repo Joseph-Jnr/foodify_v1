@@ -13,6 +13,12 @@
   --light-orange: #ffda81;
   --light-blue: #d3e2f7;
   --light-blue-accent: #8796ab;
+
+  --bs-body-bg-rgb: 255, 255, 255;
+  --bs-primary-rgb: 13, 110, 253;
+  --bd-accent-rgb: 255, 228, 132;
+  --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+  --bd-pink-rgb: 214, 51, 132;
 }
 * {
   font-family: 'Prompt', sans-serif;
@@ -191,5 +197,10 @@ html.dark .page-err-section p {
   .section-header h4,
   .section-header-alt h4 {
     font-size: 18px;
+  }
+
+  .section-header.quote-header h2,
+  .section-header-alt.services-header h2 {
+    font-size: 25px;
   }
 }
