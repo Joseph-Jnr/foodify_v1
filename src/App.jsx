@@ -13,6 +13,7 @@ import RegisterPage from './pages/RegisterPage'
 import OrderSummary from './components/orderSummary/OrderSummary'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { ToastContainer } from 'react-toastify'
 
 function App() {
   const location = useLocation()
@@ -31,6 +32,7 @@ function App() {
     <main>
       {showNavbarAndFooter && <Navbar />}
 
+      <ToastContainer hideProgressBar={true} />
       <ScrollToTop />
       <Routes>
         <Route path='/' element={<Home />} />

@@ -4,6 +4,7 @@ import { HiTrash } from 'react-icons/hi'
 import './CartItem.css'
 import { useDispatch } from 'react-redux'
 import { cartActions } from '../../store/shopping-cart/cartSlice'
+import { toast } from 'react-toastify'
 
 const CartItem = ({ item }) => {
   const { id, title, price, image, quantity, totalPrice } = item
@@ -31,6 +32,12 @@ const CartItem = ({ item }) => {
   const deleteItem = (event) => {
     dispatch(cartActions.deleteItem(id))
     event.stopPropagation()
+
+    toast.error('Item removed', {
+      position: 'top-right',
+      theme: 'dark',
+      autoClose: 2000,
+    })
   }
 
   return (

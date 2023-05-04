@@ -9,6 +9,7 @@ import FoodCardItem from '../components/foodCards/FoodCardItem'
 import { cartActions } from '../store/shopping-cart/cartSlice'
 import { foodList } from '../api/foodData'
 import '../components/foodCards/ProductDetail.css'
+import { toast } from 'react-toastify'
 
 const ProductDetail = () => {
   const { slug } = useParams()
@@ -30,6 +31,11 @@ const ProductDetail = () => {
         price,
       })
     )
+    toast.success('Item added', {
+      position: 'top-center',
+      theme: 'dark',
+      autoClose: 2000,
+    })
   }
 
   return (

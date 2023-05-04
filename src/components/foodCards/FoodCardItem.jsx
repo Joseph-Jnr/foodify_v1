@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { cartActions } from '../../store/shopping-cart/cartSlice'
 import { BsBasket2Fill } from 'react-icons/bs'
+import { toast } from 'react-toastify'
 
 const FoodCardItem = ({
   id,
@@ -39,6 +40,11 @@ const FoodCardItem = ({
         price,
       })
     )
+    toast.success('Item added', {
+      position: 'top-center',
+      theme: 'dark',
+      autoClose: 2000,
+    })
   }
 
   return (
