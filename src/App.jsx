@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useEffect } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import './App.css'
 import { Navbar, Footer } from './components/index'
@@ -11,6 +11,8 @@ import ProductDetail from './pages/ProductDetail'
 import ScrollToTop from './components/ScrollToTop'
 import RegisterPage from './pages/RegisterPage'
 import OrderSummary from './components/orderSummary/OrderSummary'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 function App() {
   const location = useLocation()
@@ -18,6 +20,12 @@ function App() {
   const showNavbarAndFooter = !(
     location.pathname === '/login' || location.pathname === '/register'
   )
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    })
+  }, [])
 
   return (
     <main>

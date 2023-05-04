@@ -85,7 +85,12 @@ const Header = () => {
             </div>
           </div>
           <div className='img-area'>
-            <img src={heroImg} className='img-fluid' alt='jollof rice' />
+            <img
+              data-aos='fade-left'
+              src={heroImg}
+              className='img-fluid'
+              alt='jollof rice'
+            />
           </div>
         </div>
       </div>

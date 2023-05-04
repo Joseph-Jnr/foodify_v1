@@ -3,7 +3,7 @@ import './ServiceCard.css'
 
 const ServiceCard = ({ icon, title, body }) => {
   return (
-    <div className='single-service-card relative mt-12'>
+    <div className='single-service-card relative mt-12' data-aos='fade-up'>
       <div className='service-card-icon-wrap'>
         <div className='service-card-icon flex justify-center items-center'>
           {icon}

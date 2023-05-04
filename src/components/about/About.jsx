@@ -10,14 +10,14 @@ const About = () => {
       <div className='container section-padding'>
         <div className='quote-wrap'>
           <div className='quote-img'>
-            <img src={quoteImg} alt='chef' />
+            <img data-aos='fade-right' src={quoteImg} alt='chef' />
           </div>
           <div className='quote-txt'>
             <div className='section-header quote-header'>
-              <h2>Welcome to Foodify</h2>
+              <h2 data-aos='fade-down'>Welcome to Foodify</h2>
               <div className='text-underline'></div>
             </div>
-            <p className='font-light'>
+            <p className='font-light' data-aos='fade-left'>
               Foodify is your go-to online restaurant for delicious Nigerian,
               Benin, and other intercontinental dishes. At Foodify, we believe
               in using fresh, locally-sourced ingredients to create flavorful

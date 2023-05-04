@@ -24,7 +24,7 @@ const MenuCard = () => {
       </div>
 
       <div className='container flex justify-center'>
-        <div className='menu-wrap' data-aos='flip-down'>
+        <div className='menu-wrap'>
           {foodList.map((food, index) => (
             <MenuItem
               key={index}

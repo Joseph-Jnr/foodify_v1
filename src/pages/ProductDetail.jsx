@@ -38,9 +38,9 @@ const ProductDetail = () => {
         <div className='container section-padding'>
           <div className='product-info grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-2'>
             <div className='preview-img-area'>
-              <img src={image} alt={title} />
+              <img data-aos='fade-right' src={image} alt={title} />
             </div>
-            <div className='product-details'>
+            <div className='product-details' data-aos='fade-down'>
               <h2>{title}</h2>
               <div className='meta flex mb-6'>
                 <span className='flex items-center'>

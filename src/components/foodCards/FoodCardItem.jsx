@@ -42,7 +42,7 @@ const FoodCardItem = ({
   }
 
   return (
-    <div className='single-food-card'>
+    <div className='single-food-card' data-aos='fade-up'>
       <div
         className='img-area'
         onMouseEnter={handleMouseEnter}

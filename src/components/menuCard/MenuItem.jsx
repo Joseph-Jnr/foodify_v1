@@ -7,7 +7,10 @@ import { AiOutlineTags } from 'react-icons/ai'
 
 const MenuItem = ({ id, image, title, category, slug, price }) => {
   return (
-    <div className='single-menu-item grid grid-cols-2 gap-4 my-5'>
+    <div
+      className='single-menu-item grid grid-cols-2 gap-4 my-5'
+      data-aos='fade-up'
+    >
       <div className='left-area grid grid-cols-1 md:grid-cols-2 gap-2'>
         <div className='img-wrap'>
           <Link to={`/foods/${slug}`}>
