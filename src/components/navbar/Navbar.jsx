@@ -55,6 +55,7 @@ const Navbar = () => {
   }, [dark])
 
   const handleThemeToggle = () => {
+    hideMobileNav()
     setDark(!dark)
   }
 
