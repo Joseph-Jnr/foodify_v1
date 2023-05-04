@@ -71,6 +71,21 @@ html.dark .form-section .form-logo {
   outline: none;
 }
 
+.form-field input:-webkit-autofill,
+.form-field input:-webkit-autofill:hover,
+.form-field input:-webkit-autofill:focus,
+.form-field input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+html.dark .form-field input:-webkit-autofill,
+html.dark .form-field input:-webkit-autofill:hover,
+html.dark .form-field input:-webkit-autofill:focus,
+html.dark .form-field input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--black) inset !important;
+  -webkit-text-fill-color: var(--light-blue);
+}
+
 .form-field label {
   position: absolute;
   left: 10px;
@@ -78,7 +93,7 @@ html.dark .form-section .form-logo {
   font-size: 13px;
   background: #fff;
   color: #878787;
-  padding: 8px 10px;
+  padding: 4px 10px;
 }
 
 .form-btns {
