@@ -1,42 +1,7 @@
-header {
-  height: 100vh;
-  position: relative;
-}
-
-header::after {
-  content: '';
-  position: absolute;
-  width: 789px;
-  height: 800px;
-  right: -280px;
-  top: -31px;
-  background: url(./assets/black-wall-texture-rough-background-dark-concrete-floor-old-grunge-background-with-black_263512-1880.jpg);
-  background-size: cover;
-  border-radius: 1160px;
-  z-index: -1;
-  color: #fff;
-}
-
 .section-padding {
   padding: 80px 0px;
 }
 
-html.dark header {
-  background: linear-gradient(to bottom, transparent, var(--black)),
-    url(./assets/hero-dark.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  position: relative;
-}
-
 main {
   position: relative;
-}
-
-@media screen and (max-width: 765px) {
-  header::after {
-    right: -600px;
-    top: -411px;
-  }
 }
