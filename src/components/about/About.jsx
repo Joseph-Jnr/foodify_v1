@@ -1,10 +1,10 @@
 import React from 'react'
 import quoteImg from '../../assets/quote-img-alt.jpg'
-import './Quote.css'
+import './About.css'
 import ServiceCard from '../services/ServiceCard'
 import serviceList from '../../api/serviceList'
 
-const Quote = () => {
+const About = () => {
   return (
     <section className='section-padding quote-section'>
       <div className='container section-padding'>
@@ -55,4 +55,4 @@ const Quote = () => {
   )
 }
 
-export default Quote
+export default About

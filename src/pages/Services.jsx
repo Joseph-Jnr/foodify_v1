@@ -1,10 +1,10 @@
 import React from 'react'
-import Quote from '../components/quote/Quote'
+import About from '../components/about/About'
 
 const Services = () => {
   return (
     <>
-      <Quote />
+      <About />
     </>
   )
 }
