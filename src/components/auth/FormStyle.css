@@ -28,6 +28,10 @@ html.dark .form-section .exit {
   color: var(--light-blue-accent);
 }
 
+.form-wrap {
+  width: 40%;
+}
+
 .form-section .form-logo {
   font-size: 30px;
   font-weight: 900;
@@ -51,12 +55,13 @@ html.dark .form-section .form-logo {
 
 .form-field {
   position: relative;
+  width: 100%;
 }
 
 .form-field input {
   border: 1px solid #dadada;
   height: 50px;
-  width: 400px;
+  width: 100%;
   border-radius: 6px;
   margin: 15px auto;
   padding: 0px 20px;
@@ -151,8 +156,12 @@ html.dark .form-btns button {
 }
 
 @media screen and (max-width: 765px) {
+  .form-wrap {
+    width: 100%;
+  }
+
   .form-field input {
-    max-width: 300px;
+    width: 100%;
   }
 
   .form-section {

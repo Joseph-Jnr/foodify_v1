@@ -47,16 +47,32 @@ const Register = () => {
             </div>
             <form onSubmit={handleSubmit}>
               {errorMessage && <p>{errorMessage}</p>}
-              <div className='form-field'>
-                <label htmlFor='username'>Username</label>
-                <input
-                  type='text'
-                  id='username'
-                  name='username'
-                  value={username}
-                  onChange={handleUsernameChange}
-                  required
-                />
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                <div className='form-field'>
+                  <label htmlFor='name'>Full name</label>
+                  <input type='text' id='name' name='name' required />
+                </div>
+                <div className='form-field'>
+                  <label htmlFor='username'>Username</label>
+                  <input
+                    type='text'
+                    id='username'
+                    name='username'
+                    value={username}
+                    onChange={handleUsernameChange}
+                    required
+                  />
+                </div>
+              </div>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                <div className='form-field'>
+                  <label htmlFor='phone'>Phone number</label>
+                  <input type='tel' id='phone' name='phone' required />
+                </div>
+                <div className='form-field'>
+                  <label htmlFor='address'>Address</label>
+                  <input type='text' id='address' name='address' required />
+                </div>
               </div>
               <div className='form-field'>
                 <label htmlFor='email'>Email</label>
