@@ -44,19 +44,11 @@ html.dark .filter-bar .single-filter.active {
 .filter-bar .single-filter p {
   display: flex;
   align-items: center;
-  width: 100%;
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 765px) {
   .food-card-section-wrap {
     margin-top: 80px;
-  }
-  .filter-bar .single-filter {
-    padding: 0px 25px;
-  }
-  .filter-bar .single-filter p {
-    display: flex;
-    align-items: center;
-    width: 100%;
   }
 }
