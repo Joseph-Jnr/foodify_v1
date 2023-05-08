@@ -31,7 +31,7 @@ const Login = () => {
       setErrorMessage('Invalid email or password')
       setTimeout(() => {
         setErrorMessage('')
-      }, 3000)
+      }, 9000)
     }
   }
 
@@ -49,7 +49,15 @@ const Login = () => {
               <span>Enter your details below</span>
             </div>
             <form onSubmit={handleSubmit}>
-              {errorMessage && <p className='error-msg'>{errorMessage}</p>}
+              {errorMessage && (
+                <p
+                  className='error-msg'
+                  data-aos='flip-down'
+                  data-aos-duration='1000'
+                >
+                  {errorMessage}
+                </p>
+              )}
               <div className='form-field'>
                 <label htmlFor='email'>Email</label>
                 <input
