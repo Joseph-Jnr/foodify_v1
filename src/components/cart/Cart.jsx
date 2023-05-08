@@ -14,7 +14,7 @@ const Cart = ({ handleClose, open }) => {
     <>
       {open && (
         <>
-          <div className='backdrop'></div>
+          <div className='backdrop' onClick={handleClose}></div>
           <div className='cart'>
             <div className='cart-header flex justify-between'>
               <div>
