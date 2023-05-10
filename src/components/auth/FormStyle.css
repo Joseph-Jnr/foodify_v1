@@ -18,7 +18,7 @@
 
 .form-section .exit {
   position: absolute;
-  left: 60%;
+  left: 30%;
   align-items: center;
   color: rgb(13, 46, 58);
   font-size: 18px;
@@ -178,6 +178,6 @@ html.dark .register-section span {
   }
 
   .form-section .exit {
-    left: 38%;
+    left: 5%;
   }
 }

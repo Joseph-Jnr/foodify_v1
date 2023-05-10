@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from 'uuid'
 import './FormStyle.css'
 import { Link } from 'react-router-dom'
 import { BsArrowLeftSquare } from 'react-icons/bs'
+import userData from '../../api/userData'
 
 const Register = () => {
   const [username, setUsername] = useState('')
@@ -24,7 +25,10 @@ const Register = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault()
+    addUser()
+  }
 
+  const addUser = () => {
     // Redirect to home page
     window.location.href = '/'
   }
@@ -36,9 +40,9 @@ const Register = () => {
         <Link to='/' className='form-logo text-center flex justify-center'>
           Foodify
         </Link>
-        {/* <Link to='/' className='exit flex'>
-          <BsArrowLeftSquare /> <span className='ml-2'>Foodify</span>
-        </Link> */}
+        {/* <Link to='/login' className='exit flex'>
+            <BsArrowLeftSquare /> <span className='ml-2'>Go back</span>
+          </Link> */}
         <div className='flex justify-center'>
           <div className='form-wrap py-7'>
             <div className='form-top-area text-center mb-9'>
@@ -96,10 +100,15 @@ const Register = () => {
                   required
                 />
               </div>
-              <div className='form-btns flex justify-between mt-5'>
-                <button className='btn-2' type='submit'>
-                  Register
-                </button>
+              <div className='form-btns grid grid-cols-1 gap-5 lg:flex justify-between mt-5'>
+                <div>
+                  <button className='btn-2' type='submit'>
+                    Register
+                  </button>
+                </div>
+                <Link className='text-sm text-slate-400' to='/login'>
+                  Already have an account? <b>Sign in</b>
+                </Link>
               </div>
             </form>
           </div>
