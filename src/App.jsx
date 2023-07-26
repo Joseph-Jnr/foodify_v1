@@ -14,12 +14,15 @@ import OrderSummary from './components/orderSummary/OrderSummary'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { ToastContainer } from 'react-toastify'
+import Dashboard from './pages/dashboardPages/Dashboard'
 
 function App() {
   const location = useLocation()
 
   const showNavbarAndFooter = !(
-    location.pathname === '/login' || location.pathname === '/register'
+    location.pathname === '/login' ||
+    location.pathname === '/register' ||
+    location.pathname === '/dashboard'
   )
 
   useEffect(() => {
@@ -41,6 +44,7 @@ function App() {
         <Route path='/foods/:slug' element={<ProductDetail />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/register' element={<RegisterPage />} />
+        <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/order-summary' element={<OrderSummary />} />
         <Route path='*' element={<Error404 />} />
       </Routes>
