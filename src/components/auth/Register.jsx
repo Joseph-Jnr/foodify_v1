@@ -37,12 +37,16 @@ const Register = () => {
     <div className='form-section flex'>
       <div className='form-img-bg register'></div>
       <div className='container section-padding'>
-        <Link to='/' className='form-logo text-center flex justify-center'>
-          Foodify
-        </Link>
-        {/* <Link to='/login' className='exit flex'>
-            <BsArrowLeftSquare /> <span className='ml-2'>Go back</span>
-          </Link> */}
+        <div className='exit'>
+          <Link to='/login'>
+            <BsArrowLeftSquare />
+          </Link>
+        </div>
+        <div className='text-center flex justify-center'>
+          <Link to='/' className='form-logo'>
+            Foodify
+          </Link>
+        </div>
         <div className='flex justify-center'>
           <div className='form-wrap py-7'>
             <div className='form-top-area text-center mb-9'>
@@ -102,11 +106,14 @@ const Register = () => {
               </div>
               <div className='form-btns grid grid-cols-1 gap-5 lg:flex justify-between mt-5'>
                 <div>
-                  <button className='btn-2' type='submit'>
+                  <button className='btn-2 w-full' type='submit'>
                     Register
                   </button>
                 </div>
-                <Link className='text-sm text-slate-400' to='/login'>
+                <Link
+                  className='text-sm text-center text-slate-400'
+                  to='/login'
+                >
                   Already have an account? <b>Sign in</b>
                 </Link>
               </div>
