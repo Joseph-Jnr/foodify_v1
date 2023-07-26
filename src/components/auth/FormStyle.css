@@ -16,15 +16,12 @@
   background: url(../../assets/login.jpg) no-repeat right / cover;
 }
 
-.form-section .exit {
-  position: absolute;
-  left: 30%;
-  align-items: center;
+.form-section .exit a {
   color: rgb(13, 46, 58);
-  font-size: 18px;
+  font-size: 28px;
 }
 
-html.dark .form-section .exit {
+html.dark .form-section .exit a {
   color: var(--light-blue-accent);
 }
 
@@ -36,7 +33,6 @@ html.dark .form-section .exit {
   font-size: 30px;
   font-weight: 900;
   color: rgb(13, 46, 58);
-  cursor: pointer;
 }
 
 html.dark .form-section .form-logo {
@@ -68,6 +64,7 @@ html.dark .form-section .form-logo {
   font-size: 14px;
   font-weight: 300;
   transition: all 0.5s ease-in-out;
+  background: transparent;
 }
 
 .form-field input:focus,
@@ -92,6 +89,16 @@ html.dark .form-field input:-webkit-autofill:active {
 }
 
 .form-field label {
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  font-size: 13px;
+  background: #fff;
+  color: #878787;
+  padding: 4px 10px;
+}
+
+.form-field label.active {
   position: absolute;
   left: 10px;
   top: 0px;
