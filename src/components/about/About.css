@@ -8,14 +8,15 @@
 
 .quote-wrap .quote-img img {
   border-radius: 10px;
-  transform: rotate(355deg);
+  /* transform: rotate(355deg); */
   transition: 0.5s ease-in-out;
+  background-blend-mode: hue;
 }
-
+/* 
 .quote-wrap .quote-img img:hover {
   cursor: pointer;
   transform: rotate(360deg);
-}
+} */
 
 html.dark .quote-section {
   background: var(--black);
