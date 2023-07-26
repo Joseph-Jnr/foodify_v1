@@ -52,7 +52,7 @@ const Cart = ({ handleClose, open }) => {
                   <div className='text-center'>
                     <Link to='/order-summary' onClick={handleClose}>
                       <button className='checkout-btn font-bold'>
-                        PAY NOW
+                        PROCEED TO CHECKOUT
                       </button>
                     </Link>
                   </div>
