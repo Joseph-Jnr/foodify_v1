@@ -1,5 +1,5 @@
 import React from 'react'
-import quoteImg from '../../assets/quote-img-alt.jpg'
+import quoteImg from '../../assets/about_illustration2.svg'
 import './About.css'
 import ServiceCard from '../services/ServiceCard'
 import serviceList from '../../api/serviceList'
