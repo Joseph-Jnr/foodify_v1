@@ -183,6 +183,14 @@ const Navbar = () => {
                   text={'Login'}
                 />
               </Link>
+
+              {/* <div className='profile-toggle flex items-center text-xs px-2 py-2 text-slate-300 rounded-full cursor-pointer bg-slate-900'>
+                <span className='initials w-5 h-5 bg-slate-600 text-white flex items-center justify-center rounded-full'>
+                  JJ
+                </span>
+                <span className='mx-2 text-slate-200'>Joseph Jnr</span>
+                <RiArrowDownSLine className='text-slate-200' size={18} />
+              </div> */}
             </div>
           </div>
         </div>
