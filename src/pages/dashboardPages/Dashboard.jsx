@@ -7,9 +7,9 @@ const Dashboard = () => {
   return (
     <>
       <main>
-        <div className='main-dashboard-section h-screen bg-slate-100 w-full lg:w-[calc(100%-25%)] float-right'>
+        <div className='main-dashboard-section h-screen bg-slate-100 w-full lg:w-[calc(100%-20%)] float-right'>
           <TopNav />
-          <Balance />
+          {/* <Balance /> */}
         </div>
         <aside className='lg:block'>
           <SideBar />

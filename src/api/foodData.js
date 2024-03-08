@@ -4,6 +4,8 @@ import foodImg3 from '../assets/food3.jpg'
 import foodImg4 from '../assets/food4.jpg'
 import foodImg5 from '../assets/cta.jpg'
 import foodImg6 from '../assets/food5.jpg'
+import foodImg7 from '../assets/food7.jpg'
+import foodImg8 from '../assets/food8.png'
 
 import { v4 as uuidv4 } from 'uuid'
 import slugify from 'react-slugify'
@@ -86,8 +88,7 @@ export const foodList = [
   {
     id: 7,
     uuid: uuidv4(),
-    image:
-      'https://tastyappetizers.com.ng/wp-content/uploads/2021/02/WhatsApp-Image-2021-02-10-at-16.08.17-3.jpeg',
+    image: foodImg7,
     title: 'Spring Roll',
     category: 'Small chops',
     price: 800,
@@ -98,8 +99,7 @@ export const foodList = [
   {
     id: 8,
     uuid: uuidv4(),
-    image:
-      'https://panachegb.co.uk/wp-content/uploads/2020/10/DSC01713-scaled-1.jpg',
+    image: foodImg8,
     title: 'Panache',
     category: 'Drinks',
     price: 1800,
